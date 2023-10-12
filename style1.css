@@ -1,0 +1,86 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* 
+MAIN COLOR: #AB4200
+ACCENT COLOR:#ADE9FF
+ALT ACCENT COLOR: #6E9075
+LIGHT ALT: #7D9B83
+GREY COLOR: #3B3B3B
+BLACK COLOR: #202020
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GENERAL STYLE */
+.header-btn:link,
+.header-btn:visited {
+  color: #3b3b3b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.header-btn:hover,
+.header-btn:active {
+  color: #58735e;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  border-bottom: 8px solid #6e9075;
+}
+
+/* HEADER BAR */
+.header-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #6e9075;
+  color: #3b3b3b;
+}
+
+img {
+  height: 120px;
+  width: 120px;
+  align-self: left;
+}
+
+h1 {
+  font-size: 48px;
+  justify-self: start;
+  margin-right: auto;
+  margin-left: 6px;
+}
+
+.header-btn {
+  font-size: 24px;
+  align-self: right;
+  margin-right: 1%;
+}
+
+h2 {
+  color: #3b3b3b;
+  background-color: #6e9075;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+}
+
+/* CONTENT */
+
+.titus {
+  display: flex;
+  margin-top: 200px;
+}
