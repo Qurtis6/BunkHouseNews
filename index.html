@@ -29,18 +29,30 @@
     <h4>work in progress</h4>
     <div class="titus">
       <p>The bunk house has been Titus free for&nbsp;</p>
-    </br>
       <p id="show"></p>
+      <p>&nbsp;days.</p>
+      <p id="show2"></p>
       <script type="text/javascript">
         var initialDate = new Date(2023, 6, 29);
         var now = Date.now();
         var difference = now - initialDate;
         var millisecondsPerDay = 24 * 60 * 60 * 1000;
         var daysSince = Math.floor(difference / millisecondsPerDay);
-
+        var emoji;
+        if (daysSince < 5) {
+          emoji = "😭";
+        } else if (daysSince >= 5 && daysSince < 15) {
+          emoji = "😔";
+        } else if (daysSince >= 15 && daysSince < 30) {
+          emoji = "🤨";
+        } else if (daysSince >= 30 && daysSince < 90) {
+          emoji = "😀";
+        } else {
+          emoji = "🥳";
+        }
         document.getElementById("show").innerHTML = daysSince.toString();
+        document.getElementById("show2").innerHTML = emoji;
       </script>
-      <p>&nbsp;days.</p>
     </div>
   </body>
 </html>
