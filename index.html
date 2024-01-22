@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="bunkhouse-logo-icon.ico">
+    <link rel="icon" type="image/x-icon" href="bunkhouse-logo-icon.ico" />
     <title>Bunk House News</title>
   </head>
 
@@ -18,26 +18,45 @@
     <div class="header-bar">
       <h1>Bunk House News</h1>
       <a href="index.html"><img src="bunkhouse-logo.png" class="logo" /></a>
-      <a class="header-btn" href="#">History</a>
+      <a class="header-btn" href="history.html">History</a>
+      <a class="header-btn" href="shop.html">Shop</a>
       <a class="header-btn" href="master-kirby.html">Master Kirby</a>
     </div>
-    <h2>
+    <h2 class="page-header">LATEST NEWS</h2>
+    <h3>
       Where Jesus, sportsballs, unbathed gamers, and high end men's care
       products collide. Bunk House News is here to capture it all.
-    </h2>
-    <h3>Latest News:</h3>
-    <h4>work in progress</h4>
+    </h3>
+    <!-- START NEWS -->
+    <div>
+      <div class="article">
+        <h4>The Big Cheddar is Back!🧀</h4>
+        <p>
+          After 3,073 days without a clan war win, The Big Cheddar has made a
+          triumphant return to its former glory with a ⭐24-⭐18 victory. This
+          momentous event for the clan has them looking forward to what will
+          come in 2023.
+        </p>
+      </div>
+    </div>
+    <!-- END NEWS -->
     <div class="titus">
-      <p>The bunk house has been Titus free for&nbsp;</p>
-      <p id="show"></p>
+      <p>The Bunk House has been Titus free for&nbsp;</p>
+      <b id="show"></b>
       <p>&nbsp;days.</p>
-      <p id="show2"></p>
       <script type="text/javascript">
-        var initialDate = new Date(2023, 6, 29);
+        var initialDate = new Date(2023, 10, 25);
         var now = Date.now();
         var difference = now - initialDate;
         var millisecondsPerDay = 24 * 60 * 60 * 1000;
         var daysSince = Math.floor(difference / millisecondsPerDay);
+        document.getElementById("show").innerHTML = daysSince.toString();
+      </script>
+    </div>
+
+    <div class="emoji">
+      <p id="show2"></p>
+      <script type="text/javascript">
         var emoji;
         if (daysSince < 5) {
           emoji = "😭";
@@ -50,7 +69,6 @@
         } else {
           emoji = "🥳";
         }
-        document.getElementById("show").innerHTML = daysSince.toString();
         document.getElementById("show2").innerHTML = emoji;
       </script>
     </div>
