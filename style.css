@@ -56,6 +56,11 @@ h3 {
 h4 {
   font-size: 20px;
 }
+
+h5 {
+  font-size: 14px;
+  font-weight: 500;
+}
 /* HEADER BAR */
 .header-bar {
   display: flex;
@@ -85,7 +90,7 @@ h1 {
 .header-btn {
   font-size: 26px;
   align-self: right;
-  margin-right: 1%;
+  margin-right: 1.2%;
 }
 
 h2 {
@@ -101,35 +106,50 @@ h2 {
 /* HOME PAGE */
 .article-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr;
-  grid-template-rows: auto;
+  grid-template-columns: 1fr 5fr 1fr;
   font-size: 18px;
-  gap: 32px;
+  gap: 48px;
+  margin-top: 15px;
 }
-.a0 {
+.art {
   grid-column-start: 2;
   grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
 }
-.a1 {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-row: span 2;
-}
-.a2 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-row: span 2;
+.art h4:hover,
+.art h4:active {
+  text-decoration: underline;
 }
 /* MASTER KIRBY */
 .MK {
   display: flex;
   justify-content: center;
+}
+/* MEET THE BUNK HOUSE */
+.meet-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  /* grid-template-rows: 1fr 2fr 2fr; */
+  padding-top: 15px;
+  /* font-size: 20px;
+  font-weight: 800; */
+  justify-items: center;
+}
+.meet-container img {
+  max-width: 100%;
+  height: auto;
+  justify-self: center;
+  padding-top: 16px;
+}
+.meet-container div {
+  display: flex;
+  grid-column-start: 2;
+  justify-content: center;
+}
+.meet1 img {
+  max-width: 55%;
+}
+.meet1 {
+  justify-items: center;
 }
 
 /* HISTORY */
@@ -142,70 +162,52 @@ h2 {
   font-weight: 800;
   justify-items: center;
 }
-.hist0 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-.hist0 img {
+.history-container img {
   max-width: 100%;
   height: auto;
 }
-.hist0t {
+.history-container div {
+  display: flex;
   grid-column-start: 2;
-  grid-column-end: 3;
+}
+.hist0 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.hist0t {
   grid-row-start: 2;
   grid-row-end: 3;
 }
 .hist1 {
-  grid-column-start: 2;
-  grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 4;
 }
-.hist1 img {
-  max-width: 100%;
-  height: auto;
-}
 .hist1t {
-  grid-column-start: 2;
-  grid-column-end: 3;
   grid-row-start: 4;
   grid-row-end: 5;
 }
 .hist2 {
-  grid-column-start: 2;
-  grid-column-end: 3;
   grid-row-start: 5;
   grid-row-end: 6;
   overflow-x: auto;
 }
 .hist2 img {
   max-width: 275%;
-  height: auto;
   border-bottom: none;
 }
 .hist2t {
-  grid-column-start: 2;
-  grid-column-end: 3;
   grid-row-start: 6;
   grid-row-end: 7;
 }
 .hist3 {
-  grid-column-start: 2;
-  grid-column-end: 3;
   grid-row-start: 7;
   grid-row-end: 8;
   overflow-x: auto;
 }
 .hist3 img {
   max-width: 160%;
-  height: auto;
 }
 .hist3t {
-  grid-column-start: 2;
-  grid-column-end: 3;
   grid-row-start: 8;
   grid-row-end: 9;
 }
