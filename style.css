@@ -43,6 +43,18 @@ body {
 
 .page-header {
   padding-top: 4px;
+  border-bottom: 4px solid #3b3b3b;
+}
+
+h2 {
+  font-size: 36px;
+  color: #e7c7a5;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4px;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  background-color: #3b3b3b;
 }
 
 h3 {
@@ -51,6 +63,8 @@ h3 {
   justify-content: center;
   border-bottom: 4px solid #3b3b3b;
   padding-bottom: 4px;
+  background-color: #6e9075;
+  border-bottom: 4px solid #3b3b3b;
 }
 
 h4 {
@@ -68,7 +82,6 @@ h5 {
   align-items: center;
   background-color: #6e9075;
   height: 108px;
-  border-bottom: 4px solid #3b3b3b;
 }
 .a {
   height: 120px;
@@ -91,16 +104,6 @@ h1 {
   font-size: 26px;
   align-self: right;
   margin-right: 1.2%;
-}
-
-h2 {
-  font-size: 30px;
-  color: #3b3b3b;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 4px;
-  padding-left: 0.5%;
-  padding-right: 0.5%;
 }
 
 /* HOME PAGE */
@@ -128,17 +131,15 @@ h2 {
 .meet-container {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  /* grid-template-rows: 1fr 2fr 2fr; */
-  padding-top: 15px;
-  /* font-size: 20px;
-  font-weight: 800; */
+  margin-top: 16px;
   justify-items: center;
+  margin-bottom: 24px;
 }
 .meet-container img {
   max-width: 100%;
   height: auto;
   justify-self: center;
-  padding-top: 16px;
+  padding-top: 24px;
 }
 .meet-container div {
   display: flex;
@@ -148,8 +149,12 @@ h2 {
 .meet1 img {
   max-width: 55%;
 }
-.meet1 {
-  justify-items: center;
+.meet8 img {
+  max-width: 55%;
+}
+
+.meet10 img {
+  max-width: 30%;
 }
 
 /* HISTORY */
@@ -157,7 +162,7 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: auto 50px auto 50px auto 50px auto 50px;
-  padding-top: 15px;
+  margin-top: 16px;
   font-size: 20px;
   font-weight: 800;
   justify-items: center;
