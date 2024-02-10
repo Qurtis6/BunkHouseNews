@@ -37,13 +37,13 @@ BLACK COLOR: #202020
 
 body {
   font-family: "Inter", sans-serif;
-  border-bottom: 8px solid #6e9075;
+  border-bottom: 12px solid #6e9075;
   background-color: #e7c7a5;
 }
 
 .page-header {
-  padding-top: 4px;
-  border-bottom: 4px solid #3b3b3b;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 h2 {
@@ -68,12 +68,13 @@ h3 {
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 21px;
 }
 
 h5 {
   font-size: 14px;
   font-weight: 500;
+  padding-bottom: 4px;
 }
 /* HEADER BAR */
 .header-bar {
@@ -81,10 +82,7 @@ h5 {
   justify-content: flex-end;
   align-items: center;
   background-color: #6e9075;
-  height: 108px;
-}
-.a {
-  height: 120px;
+  height: 10%;
 }
 
 .logo {
@@ -109,7 +107,7 @@ h1 {
 /* HOME PAGE */
 .article-container {
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
   font-size: 18px;
   gap: 48px;
   margin-top: 15px;
