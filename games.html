@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="media/bunkhouse-logo.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="media/bunkhouse-logo.png" />
+    <title>Bunk House News - Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+    canvas {
+        border:1px solid #d3d3d3;
+        background-color: #f1f1f1;
+    }
+    </style>
+    </head>
+    <body onload="startGame()">
+    <script>
+    
+    var myGamePiece;
+    var myMusic;
+    
+    function startGame() {
+        myGamePiece = new component(80, 80, href= "media/Spr_DeckMaster.png", 200, 95, "image");
+        myMusic = new sound("audio/Deckmaster.mp3");
+        myMusic.play();
+        myGameArea.start();
+    }
+    function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }    
+}
+
+    var myGameArea = {
+        canvas : document.createElement("canvas"),
+        start : function() {
+            this.canvas.width = 480;
+            this.canvas.height = 270;
+            this.context = this.canvas.getContext("2d");
+            document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+            this.frameNo = 0;
+            this.interval = setInterval(updateGameArea, 20);
+            },
+        clear : function() {
+            this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        },
+        stop : function() {
+            clearInterval(this.interval);
+        }
+    }
+    
+    function component(width, height, color, x, y, type) {
+        this.type = type;
+        if (type == "image") {
+            this.image = new Image();
+            this.image.src = color;
+        }
+        this.width = width;
+        this.height = height;
+        this.speedX = 0;
+        this.speedY = 0;    
+        this.x = x;
+        this.y = y;    
+        this.update = function() {
+            ctx = myGameArea.context;
+            if (type == "image") {
+                ctx.drawImage(this.image, 
+                    this.x, 
+                    this.y,
+                    this.width, this.height);
+            } else {
+                ctx.fillStyle = color;
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+            }
+        }
+        this.newPos = function() {
+            this.x = 200;
+            this.y = 95;        
+        }
+    }
+    
+    function updateGameArea() {
+        myGameArea.clear();
+        myGamePiece.newPos();
+        myGamePiece.update();
+    }
+    
+    function move(dir) {
+        
+        
+        if (dir == "up") {myGamePiece.image.src = "media/Spr_DeckMaster_Dance1.png";}
+        if (dir == "down") {myGamePiece.image.src = "media/Spr_DeckMaster_Dance2.png"}
+        if (dir == "left") {myGamePiece.image.src = "media/Spr_DeckMaster_Dance3.png"}
+   
+    }
+    
+    function clearmove() {
+        myGamePiece.image.src = "media/Spr_DeckMaster.png";
+        myGamePiece.speedX = 0; 
+        myGamePiece.speedY = 0; 
+    }
+    </script>
+    <div style="text-align:center;width:480px;">
+      <button onmousedown="move('up')" onmouseup="clearmove()" ontouchstart="move('up')">UP</button><br><br>
+      <button onmousedown="move('left')" onmouseup="clearmove()" ontouchstart="move('left')">LEFT</button>
+      <!-- <button onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">RIGHT</button><br><br> -->
+      <button onmousedown="move('down')" onmouseup="clearmove()" ontouchstart="move('down')">DOWN</button>
+    </div>
+    
+    <p>Make DeckMaster Dance!</p>
+}
+    </script>
+
+    <a href="index.html">Home</a>
+  </body>
+</html>
