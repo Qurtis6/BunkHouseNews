@@ -105,10 +105,27 @@
     
     function move(dir) {
         
-        
-        if (dir == "up") {myGamePiece.image.src = "media/Spr_DeckMaster_Dance1.png";}
         if (dir == "down") {myGamePiece.image.src = "media/Spr_DeckMaster_Dance2.png"}
         if (dir == "left") {myGamePiece.image.src = "media/Spr_DeckMaster_Dance3.png"}
+        if (dir == "up"){
+            for (let i = 1; i<30; i++) {
+                if ((i%3) == 1) {
+                setTimeout(() => {
+                myGamePiece.image.src = "media/Spr_DeckMaster_Dance1.png";
+                },250*i);}
+                else if ((i%3) == 2) {
+                setTimeout(() => {
+                myGamePiece.image.src = "media/Spr_DeckMaster_Dance2.png";
+                },250*i);}
+                else{
+                setTimeout(() => {
+                myGamePiece.image.src = "media/Spr_DeckMaster_Dance3.png";
+                },250*i);}
+            }
+            setTimeout(() => {
+                clearmove()
+                },250*30);
+        }
    
     }
     
@@ -119,10 +136,10 @@
     }
     </script>
     <div style="text-align:center;width:480px;">
-      <button onmousedown="move('up')" onmouseup="clearmove()" ontouchstart="move('up')">UP</button><br><br>
-      <button onmousedown="move('left')" onmouseup="clearmove()" ontouchstart="move('left')">LEFT</button>
-      <!-- <button onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">RIGHT</button><br><br> -->
-      <button onmousedown="move('down')" onmouseup="clearmove()" ontouchstart="move('down')">DOWN</button>
+      <button onmousedown="move('up')" ontouchstart="move('up')">Dance!</button><br><br>
+      <!--<button onmousedown="move('left')" onmouseup="clearmove()" ontouchstart="move('left')">LEFT</button>
+      <button onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">RIGHT</button><br><br> 
+      <button onmousedown="move('down')" onmouseup="clearmove()" ontouchstart="move('down')">DOWN</button>-->
     </div>
     
     <p>Make DeckMaster Dance!</p>
