@@ -64,6 +64,7 @@ h5 {
   background-color: #6e9075;
   height: 10%;
   font-weight: 600;
+  padding-bottom: none;
 }
 .logo {
   align-self: left;
