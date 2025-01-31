@@ -80,7 +80,6 @@ h5 {
 }
 .header-btn:hover,
 .header-btn:active,
-.header-btn:focus,
 .dropdown-content a:hover,
 .dropdown-content a:active {
   color: #58735e;
@@ -116,11 +115,11 @@ h1 {
   display: block;
   text-align: left;
 }
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown:focus .dropdown-content {
   display: block;
 }
-.dropdown-content:link,
-
+/* .dropdown-content:link, */
 
 /* HOME PAGE */
 .article-container {
