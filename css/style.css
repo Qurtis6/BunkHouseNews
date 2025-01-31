@@ -80,6 +80,7 @@ h5 {
 }
 .header-btn:hover,
 .header-btn:active,
+.header-btn:focus,
 .dropdown-content a:hover,
 .dropdown-content a:active {
   color: #58735e;
@@ -124,9 +125,9 @@ h1 {
 /* HOME PAGE */
 .article-container {
   display: grid;
-  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-columns: 1fr 9fr 1fr;
   font-size: 18px;
-  gap: 48px;
+  gap: 24px;
   margin-top: 15px;
 }
 .art {
