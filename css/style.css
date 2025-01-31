@@ -90,9 +90,9 @@ h1 {
   margin-right: auto;
   margin-left: 8px;
 }
-.dropdown {
+/* .dropdown {
   overflow: hidden;
-}
+} */
 .header-btn,
 .dropdown {
   font-size: 26px;
@@ -124,7 +124,7 @@ h1 {
 /* HOME PAGE */
 .article-container {
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 8fr 1fr;
   font-size: 18px;
   gap: 48px;
   margin-top: 15px;
