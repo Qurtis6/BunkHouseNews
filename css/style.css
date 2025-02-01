@@ -42,8 +42,8 @@ h3 {
   display: flex;
   justify-content: center;
   border-bottom: 4px solid #3b3b3b;
-  /* padding-bottom: 4px; */
-  /* background-color: #6e9075; */
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 h4 {
@@ -115,16 +115,18 @@ h1 {
   display: block;
   text-align: left;
 }
-.dropdown:hover .dropdown-content,
-.dropdown:focus .dropdown-content {
-  display: block;
+
+@media (hover: hover) {
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
 }
-/* .dropdown-content:link, */
 
 /* HOME PAGE */
 .article-container {
   display: grid;
-  grid-template-columns: 1fr 9fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
   font-size: 18px;
   gap: 24px;
   margin-top: 15px;
@@ -222,3 +224,90 @@ h1 {
   display: flex;
   justify-content: center;
 }
+/******************* MOBILE VERSION ********************/
+@media (hover: none) {
+  h1 {
+    font-size: 52px;
+    width: 350px;
+    margin-right: auto;
+    justify-self: left;
+  }
+
+  .off-screen-menu {
+    background-color: #6e9075;
+    height: 100vh;
+    width: 100%;
+    max-width: 85vw;
+    position: fixed;
+    top: 0;
+    right: -85vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.3s ease;
+    font-family: inherit;
+    font-size: 44px;
+    font-weight: 500;
+    border-left: 4px solid #3b3b3b;
+  }
+  .off-screen-menu.active {
+    right: 0;
+  }
+
+  nav {
+    display: flex;
+    background-color: #6e9075;
+    align-items: center;
+    justify-content: right;
+  }
+
+  .ham-menu {
+    height: 50px;
+    width: 40px;
+    margin-right: 8px;
+    margin-left: auto;
+    position: relative;
+    align-self: right;
+  }
+  .ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: #3b3b3b;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+  }
+  .ham-menu span:nth-child(1) {
+    top: 25%;
+  }
+  .ham-menu span:nth-child(3) {
+    top: 75%;
+  }
+  .ham-menu.active span {
+    background-color: #3b3b3b;
+  }
+  .ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .ham-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  .article-container {
+    display: grid;
+    grid-template-columns: 0.1fr 9fr 0.1fr;
+    font-size: 18px;
+    gap: 4px;
+    margin-top: 15px;
+  }
+}
+/******************* END MOBILE VERSION ********************/
