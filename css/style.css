@@ -42,8 +42,6 @@ h3 {
   display: flex;
   justify-content: center;
   border-bottom: 4px solid #3b3b3b;
-  margin-left: 4px;
-  margin-right: 4px;
 }
 
 h4 {
@@ -166,6 +164,9 @@ h1 {
 .meet1 img {
   max-width: 55%;
 }
+.meet5 img {
+  max-width: 55%;
+}
 .meet7 img {
   max-width: 55%;
 }
@@ -173,7 +174,10 @@ h1 {
   max-width: 55%;
 }
 .meet10 img {
-  max-width: 30%;
+  max-width: 80%;
+}
+.meet11 img {
+  max-width: 32%;
 }
 
 /* HISTORY */
@@ -225,7 +229,7 @@ h1 {
   justify-content: center;
 }
 /******************* MOBILE VERSION ********************/
-@media (hover: none) {
+@media (max-width: 800px) {
   h1 {
     font-size: 52px;
     width: 350px;
@@ -250,8 +254,18 @@ h1 {
     font-family: inherit;
     font-size: 44px;
     font-weight: 500;
-    border-left: 4px solid #3b3b3b;
+    border-left: 6px solid #3b3b3b;
   }
+  .off-screen-menu ul {
+    padding: 20px;
+    text-decoration: none;
+  }
+  /* .off-screen-menu ul:hover,
+  .off-screen-menu ul:visited,
+  .off-screen-menu ul:link,
+  .off-screen-menu ul:active {
+    text-decoration: none;
+  } */
   .off-screen-menu.active {
     right: 0;
   }
@@ -266,7 +280,7 @@ h1 {
   .ham-menu {
     height: 50px;
     width: 40px;
-    margin-right: 8px;
+    margin-right: 12 px;
     margin-left: auto;
     position: relative;
     align-self: right;
@@ -303,11 +317,13 @@ h1 {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
   .article-container {
-    display: grid;
-    grid-template-columns: 0.1fr 9fr 0.1fr;
+    display: block;
     font-size: 18px;
-    gap: 4px;
-    margin-top: 15px;
+    gap: 40px;
+    margin: 12px;
+  }
+  .art {
+    margin-bottom: 24px;
   }
 }
 /******************* END MOBILE VERSION ********************/

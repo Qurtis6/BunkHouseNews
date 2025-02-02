@@ -33,11 +33,11 @@ var hamburger =
 </a>\
     <div class="off-screen-menu">\
       <ul>\
-        <li><a href="meet.html">Meet the <br >Bunk House</a></li>\
-        <li><a href="history.html">History</a></li>\
-        <li><a href="shop.html">Shop</a></li>\
-        <li><a href="games.html">Games</a></li>\
-        <li><a href="master-kirby.html">Master<br >Kirby</a></li>\
+        <ul><a href="meet.html">Meet the <br >Bunk House</a></li>\
+        <ul><a href="history.html">History</a></li>\
+        <ul><a href="shop.html">Shop</a></li>\
+        <ul><a href="games.html">Games</a></li>\
+        <ul><a href="master-kirby.html">Master<br >Kirby</a></li>\
       </ul>\
     </div>\
     <nav>\
@@ -48,7 +48,7 @@ var hamburger =
       </div>\
     </nav>';
 
-const mediaQuery = window.matchMedia("(max-width: 768px)");
+const mediaQuery = window.matchMedia("(max-width: 800px)");
 if (mediaQuery.matches) {
   document.getElementById("nav").innerHTML = hamburger;
   const hamMenu = document.querySelector(".ham-menu");
