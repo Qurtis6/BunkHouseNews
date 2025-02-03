@@ -1,80 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.6" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/x-icon" href="media/bunkhouse-logo.png" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="media/bunkhouse-logo.png"
-    />
-    <title>Bunk House News - History</title>
-    <nav id="nav"></nav>
-    <script src="nav.js"></script>
-  </head>
 
-  <body>
-    <!-- PAGE HEADER -->
-    <h2 class="page-header">HISTORY</h2>
-    <h3>
-      The only constant in the Bunk House is change and someone loosing their
-      socks.
-    </h3>
-    <!-- START OF CONTENT -->
-    <div class="history-container">
-      <div class="hist0">
-        <img
-          src="media/2010JUL.jpg"
-          alt="Bunkhoue in July 2010"
-          height="2736"
-          width="3648"
-        />
-      </div>
-      <div>
-        <h4>July 2010</h4>
-      </div>
-      <div class="hist1">
-        <img
-          src="media/2016DEC25.jpg"
-          alt="Bunkhoue in December 2016"
-          height="1380"
-          width="1960"
-        />
-      </div>
-      <div>
-        <h4>December 2016</h4>
-      </div>
-      <div class="hist2">
-        <img
-          src="media/2018DEC28.jpg"
-          alt="Bunkhoue in December 2018"
-          height="1673"
-          width="10242"
-        />
-      </div>
-      <div>
-        <h4>December 2018</h4>
-      </div>
-      <div class="hist3">
-        <img
-          src="media/2021AUG01.jpg"
-          alt="Bunkhoue in August 2021"
-          height="1394"
-          width="4096"
-        />
-      </div>
-      <div>
-        <h4>August 2021</h4>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.6" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/x-icon" href="media/bunkhouse-logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="media/bunkhouse-logo.png" />
+  <!-- for optimal display on high DPI devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
+  <title>Bunk House News - History</title>
+  <nav id="nav"></nav>
+  <script src="nav.js"></script>
+</head>
+
+<body>
+  <!-- PAGE HEADER -->
+  <h2 class="page-header">HISTORY</h2>
+  <h3>
+    The only constant in the Bunk House is change and someone loosing their
+    socks.
+  </h3>
+  <!-- START OF CONTENT -->
+  <div class="history-container">
+    <div class="hist0">
+      <img src="media/2010JUL.jpg" alt="Bunkhoue in July 2010" height="2736" width="3648" />
     </div>
-    <a href="index.html">Home</a>
-  </body>
+    <div>
+      <h4>July 2010</h4>
+    </div>
+    <div class="hist1">
+      <img src="media/2016DEC25.jpg" alt="Bunkhoue in December 2016" height="1380" width="1960" />
+    </div>
+    <div>
+      <h4>December 2016</h4>
+    </div>
+    <div class="hist2">
+      <img src="media/2018DEC28.jpg" alt="Bunkhoue in December 2018" height="1673" width="10242" />
+    </div>
+    <div>
+      <h4>December 2018</h4>
+    </div>
+    <div id="viewer" class="hist3" style="width: 80vw; height: 80vh;"></div>
+    <div>
+      <h4>August 2021</h4>
+    </div>
+  </div>
+  <a href="index.html">Home</a>
+</body>
+
+<script type="importmap">
+  {
+      "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js",
+          "@photo-sphere-viewer/core": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.module.js"
+      }
+  }
+</script>
+
+<script type="module">
+  import { Viewer } from '@photo-sphere-viewer/core';
+
+  const viewer = new Viewer({
+    container: document.querySelector('#viewer'),
+    panorama: 'media/2021AUG01.jpg',
+    fisheye: 1,
+    defaultYaw: 0, defaultPitch: 0,
+  });
+</script>
+
 </html>
