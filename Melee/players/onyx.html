@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>2022 Tournament</title>
+  <script src="tournament.js"></script>
+  <link href="cleb.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="../Images/Tournament Background.webm" type="video/webm">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="center">
+    <h1>2022 Tournament</h1>
+    <p></p>
+    <br>
+    <div class="container">
+      Grand Finals
+      <div class="match">
+        <img class="char-left" src="../Images/Classic Poses/Left/samus-black.png">
+        <img class="char-right" src="../Images/Classic Poses/Right/roy.png">
+      </div>
+      <img class="vs" src="../Images/VS.svg">
+      P1 vs P2
+    </div>
+    <br>
+  </div>
+  <div class="modal" id="myModal">
+    <!-- Modal content -->
+    <div class="modal-div">
+      <span class="close">&times; Close</span>
+      <div class="modal-content">
+        <p class="modal-p-title" id="modal-p-title">Name here</p>
+        <table id="modal-table" style="width: 100%;">
+          <td class="p1" style="width: 38%; text-align: right; font-size: 20px;">PWRM</td>
+          <td class="p1wins" style="width: 10%; text-align: center; font-size: 30px;">2</td>
+          <td style="width: 4%; text-align: center;">vs</td>
+          <td class="p2wins" style="width: 10%; text-align: center; font-size: 30px;">0</td>
+          <td class="p2" style="width: 38%; font-size: 20px;">Mozy</td>
+        </table>
+        <br>
+        <iframe class="modal-video" id="modal-video" src="" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    // Get the button that opens the modal
+    var btn = document.getElementsByClassName("item-match");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    var modal_p_title = document.getElementById("modal-p-title");
+    var modal_table = document.getElementById("modal-table");
+    var modal_video = document.getElementById("modal-video");
+    // When the user clicks on the button, open the modal
+    for (i = 0; i < btn.length; i++) {
+      (function (index) {
+        btn[index].onclick = function () {
+          modal.style.display = "block";
+          modal_p_title.textContent = btn[index].getAttribute('data-match');
+          modal_table.rows[0].cells[0].innerHTML = btn[index].getAttribute('data-p1');
+          modal_table.rows[0].cells[1].innerHTML = btn[index].getAttribute('data-p1wins');
+          modal_table.rows[0].cells[4].innerHTML = btn[index].getAttribute('data-p2');
+          modal_table.rows[0].cells[3].innerHTML = btn[index].getAttribute('data-p2wins');
+          modal_video.src = btn[index].getAttribute('data-video');
+        };
+      })(i)
+    }
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>

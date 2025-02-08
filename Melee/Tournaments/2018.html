@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>2018 Tournament</title>
+  <script type="text/javascript" src="melee.js"></script>
+  <link href="tournaments.css" rel="stylesheet" type="text/css" />
+  <link href="results.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="../Images/Tournament Background.webm" type="video/webm">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="center">
+    <div class="header-bar">
+      <h1>2018 Smash Tournament</h1>
+      <a href="../index.html">
+        home
+      </a>
+    </div>
+
+    <div class="tab">
+      <button class="tablinks" id="b-Results" onclick="Section(event, 'Results')">Results</button>
+      <button class="tablinks" id="b-Final Bracket" onclick="Section(event, 'Final Bracket')">Final Bracket</button>
+    </div>
+
+    <div id="Results" class="container">
+      <div class="results">
+        <div style="display: flex;">
+          <div class="first box">
+            1 Preston
+            <img src="../Images/Classic Poses/Left/fox.png" class="pose">
+          </div>
+          <div class="second box">
+            2 Mozy
+            <img src="../Images/Classic Poses/Left/falco-red.png" class="pose">
+          </div>
+          <div class="third box">
+            3 Jaco
+            <img src="../Images/Classic Poses/Left/puff-green.png" class="pose">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Final Bracket" class="container">
+      <div class="wrapper">
+        <div class="item">
+          <div class="item-parent">
+            <div class="item-match">
+              <table>
+                <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                  <td>Curtis</td>
+                  <td><img class="icon" src="../icons/marth.png"></td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>Preston</td>
+                  <td><img class="icon" src="../icons/fox.png"></td>
+                  <td>0</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="item-childrens">
+            <div class="item-child">
+              <div class="item">
+                <div class="item-parent">
+                  <div class="item-match">
+                    <table>
+                      <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                        <td>Curtis</td>
+                        <td><img class="icon" src="../icons/marth.png"></td>
+                        <td>2</td>
+                      </tr>
+                      <tr>
+                        <td>Joshua</td>
+                        <td><img class="icon" src="../icons/marth-red.png"></td>
+                        <td>1</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="item-childrens">
+                  <div class="item-child">
+                    <div class="item">
+                      <div class="item-parent">
+                        <div class="item-match">
+                          <table>
+                            <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                              <td>Curtis</td>
+                              <td><img class="icon" src="../icons/marth.png"></td>
+                              <td>2</td>
+                            </tr>
+                            <tr>
+                              <td>Preston</td>
+                              <td><img class="icon" src="../icons/fox.png"></td>
+                              <td>0</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="item-childrens">
+                        <div class="item-childblk">
+                          <br><br>
+                        </div>
+                        <div class="item-child-only">
+                          <div class="item-match">
+                            <table>
+                              <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                                <td>Preston</td>
+                                <td><img class="icon" src="../icons/fox.png"></td>
+                                <td>2</td>
+                              </tr>
+                              <tr>
+                                <td>Onyx</td>
+                                <td></td>
+                                <td>0</td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-child">
+                    <div class="item">
+                      <div class="item-parent">
+                        <div class="item-match">
+                          <table>
+                            <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                              <td>Jacob</td>
+                              <td><img class="icon" src="../icons/puff-green.png"></td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td>Joshua</td>
+                              <td><img class="icon" src="../icons/marth-red.png"></td>
+                              <td>2</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="item-childrens">
+                        <div class="item-child">
+                          <div class="item">
+                            <div class="item-parent">
+                              <div class="item-match">
+                                <table>
+                                  <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                                    <td>Joshua</td>
+                                    <td><img class="icon" src="../icons/marth-red.png"></td>
+                                    <td>2</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Andrew</td>
+                                    <td><img class="icon" src="../icons/sheik-green.png"></td>
+                                    <td>0</td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="item-childrens">
+                              <div class="item-child">
+                                <div class="item-match">
+                                  <table>
+                                    <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                                      <td>Joshua</td>
+                                      <td><img class="icon" src="../icons/marth-red.png"></td>
+                                      <td>2</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Caleb</td>
+                                      <td><img class="icon" src="../icons/falco-red.png"></td>
+                                      <td>1</td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </div>
+                              <div class="item-child">
+                                <div class="item-match">
+                                  <table>
+                                    <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                                      <td>Andrew</td>
+                                      <td><img class="icon" src="../icons/sheik-green.png"></td>
+                                      <td>2</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Titus</td>
+                                      <td><img class="icon" src="../icons/falco-green.png"></td>
+                                      <td>1</td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-child">
+                          <div class="item">
+                            <div class="item-parent">
+                              <div class="item-match">
+                                <table>
+                                  <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                                    <td>Jacob</td>
+                                    <td><img class="icon" src="../icons/puff-green.png"></td>
+                                    <td>2</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Johnny</td>
+                                    <td><img class="icon" src="../icons/samus.png"></td>
+                                    <td>1</td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="item-childrens">
+                              <div class="item-childblk">
+                                <br><br>
+                              </div>
+                              <div class="item-child-only">
+                                <div class="item-match">
+                                  <table>
+                                    <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                                      <td>Johnny</td>
+                                      <td><img class="icon" src="../icons/samus.png"></td>
+                                      <td>2</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Grant</td>
+                                      <td><img class="icon" src="../icons/ganon.png"></td>
+                                      <td>0</td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>&emsp;Loser's Bracket<br>
+      <div class="wrapper">
+        <div class="item">
+          <div class="item-parent">
+            <div class="item-match">
+              <table>
+                <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                  <td>Andrew</td>
+                  <td><img class="icon" src="../icons/sheik-green.png"></td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>Preston</td>
+                  <td><img class="icon" src="../icons/fox.png"></td>
+                  <td>2</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="item-childrens">
+            <div class="item-child">
+              <div class="item">
+                <div class="item-parent">
+                  <div class="item-match">
+                    <table>
+                      <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                        <td>Andrew</td>
+                        <td><img class="icon" src="../icons/sheik-green.png"></td>
+                        <td>2</td>
+                      </tr>
+                      <tr>
+                        <td>Joshua</td>
+                        <td><img class="icon" src="../icons/marth-red.png"></td>
+                        <td>1</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="item-childrens">
+                  <div class="item-child">
+                    <div class="item">
+                      <div class="item-parent">
+                        <div class="item-match">
+                          <table>
+                            <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                              <td>Jacob</td>
+                              <td><img class="icon" src="../icons/puff-green.png"></td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td>Joshua</td>
+                              <td><img class="icon" src="../icons/marth-red.png"></td>
+                              <td>2</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="item-childrens">
+                        <div class="item-child">
+                          <div class="item">
+                            <div class="item-parent">
+                              <div class="item-match">
+                                <table>
+                                  <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                                    <td>Jacob</td>
+                                    <td><img class="icon" src="../icons/puff-green.png"></td>
+                                    <td>2</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Johnny</td>
+                                    <td><img class="icon" src="../icons/samus.png"></td>
+                                    <td>1</td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="item-childrens">
+                              <div class="item-child">
+                                <div class="item-match">
+                                  <table>
+                                    <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                                      <td>Johnny</td>
+                                      <td><img class="icon" src="../icons/samus.png"></td>
+                                      <td>2</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Grant</td>
+                                      <td><img class="icon" src="../icons/ganon.png"></td>
+                                      <td>0</td>
+                                    </tr>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-child">
+              <div class="item">
+                <div class="item-parent">
+                  <div class="item-match">
+                    <table>
+                      <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                        <td>Preston</td>
+                        <td><img class="icon" src="../icons/fox.png"></td>
+                        <td>2</td>
+                      </tr>
+                      <tr>
+                        <td>Jacob</td>
+                        <td><img class="icon" src="../icons/puff-green.png"></td>
+                        <td>0</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="item-childrens">
+                  <div class="item-child">
+                    <div class="item">
+                      <div class="item-parent">
+                        <div class="item-match">
+                          <table>
+                            <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                              <td>Preston</td>
+                              <td><img class="icon" src="../icons/fox.png"></td>
+                              <td>2</td>
+                            </tr>
+                            <tr>
+                              <td>Caleb</td>
+                              <td><img class="icon" src="../icons/marth-white.png"></td>
+                              <td>0</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="item-childrens">
+                        <div class="item-child">
+                          <div class="item-match">
+                            <table>
+                              <tr style="border-bottom: 2px solid rgb(225, 225, 225);">
+                                <td>Johnny</td>
+                                <td><img class="icon" src="../icons/link-black.png"></td>
+                                <td>0</td>
+                              </tr>
+                              <tr>
+                                <td>Caleb</td>
+                                <td><img class="icon" src="../icons/marth-white.png"></td>
+                                <td>2</td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+
+    <br>
+  </div>
+  <script src="tournament.js"></script>
+</body>
+
+
+</html>

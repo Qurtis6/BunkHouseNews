@@ -14,6 +14,7 @@ var html =
     </a>\
     <a href="history.html">History</a>\
     <a href="games.html">Games</a>\
+    <a href="Melee/index.html">Wehrman Melee</a>\
   </div>\
 </div>\
 <a class="header-btn" href="shop.html">\

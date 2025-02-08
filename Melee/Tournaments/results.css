@@ -1,0 +1,33 @@
+div.results {
+    width: 725px;
+    padding: 10px;
+}
+.box {
+    margin: 10px;
+    padding: 5px;
+    font-size: 50px;
+    border-radius: 5px;
+    border-style: double;
+    border-color: magenta;
+    overflow: hidden;
+    text-shadow: 2px 2px black;
+}
+.pose {
+    height: 170%;
+    width: 170%;
+    margin-top: -40%;
+    margin-left: -40%;
+    filter: drop-shadow(10px 7px 0px magenta);
+}
+.first {
+    height: 250px;
+    width: 250px;
+}
+.second {
+    height: 200px;
+    width: 200px;
+}
+.third {
+    height: 180px;
+    width: 180px;
+}

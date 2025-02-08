@@ -1,0 +1,117 @@
+html{
+  color: lavender;
+  text-emphasis-color: lavender;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  font-size: 16pt;
+  justify-content: safe center;
+  background-attachment: fixed;
+}
+#myVideo {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+img {  
+  max-width: 100%
+}
+h1 {
+  background-color: rgb(30, 30, 30,0.5);
+  font-size: 30pt;
+  text-align: center;
+}
+div.center {
+  position: relative;
+  width: 800px;
+  border-style: double;
+  background-color: rgb(25,25,25,0.5);
+  background-size: 100%; 
+}
+h2{
+  margin-top: 0px;
+  margin-bottom: 30px;
+  background-color: lightgoldenrodyellow;
+  text-align: center;
+}
+h3{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: lightcyan;
+  text-align: center;
+}
+h4{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: lightgoldenrodyellow;
+  text-align: center;
+}
+div.container {
+  display: flex;
+}
+div.pr {
+  margin-left: 40px;
+  margin-right: 40px;
+  width: 300px;
+  color: black;
+  background-color: white;
+  align-items: left;
+}
+div.right{
+  font-size: 30pt;
+  color: black;
+  width: 400px;
+  margin-right: 40px;
+}
+div.tourney{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: white;
+}
+div.other{
+  background-color: white;
+}
+p.pr{
+  margin-left: 20px;
+}
+p.tourney{
+    margin-top: 0px;
+  margin-bottom: 0px;
+    text-align: center;
+  background-color: white;
+}
+img.icon{
+  margin-bottom: -3px;
+  width: 20px;
+  height: 20px
+}
+a 
+{ 
+    color: black; 
+    text-decoration: none;
+} 
+ 
+a:hover 
+{  
+    color: darkred;
+    background-color: lightgoldenrodyellow;
+} 
+p.link{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+p.link:hover{
+  background-color: lightgoldenrodyellow;
+}
+p.tlink{
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+p.tlink:hover{
+  background-color: lightcyan;
+}
