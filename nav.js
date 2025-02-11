@@ -15,6 +15,7 @@ var html =
     <a href="history.html">History</a>\
     <a href="games.html">Games</a>\
     <a href="Melee/index.html">Wehrman Melee</a>\
+    <a href="bunkhousetv.html">Bunkhouse TV</a>\
   </div>\
 </div>\
 <a class="header-btn" href="shop.html">\
@@ -38,6 +39,7 @@ var hamburger =
         <ul><a href="history.html">History</a></li>\
         <ul><a href="shop.html">Shop</a></li>\
         <ul><a href="games.html">Games</a></li>\
+        <ul><a href="bunkhousetv.html">Bunkhouse TV</a></li>\
         <ul><a href="master-kirby.html">Master<br >Kirby</a></li>\
       </ul>\
     </div>\
