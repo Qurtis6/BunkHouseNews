@@ -3,7 +3,6 @@
 
   <head>
     <title>Wehrman Melee</title>
-    <script type="text/javascript" src="melee.js"></script>
     <link href="melee.css" rel="stylesheet" type="text/css"/>
   </head>
 
@@ -23,39 +22,10 @@
       <h2>Power Rankings</h2>
       <div class="pr">
         <p></p>
-        <a href="players/preston.html"><p class="link">1) Gouda <img class="icon" src="icons/fox.png"> </p></a>
-        <a href="players/caleb.html"><p class="link">2) Mozy <img class="icon" src="icons/falco-red.png"></p></a>
-        <a href="players/onyx.html"><p class="link">3) OP <img class="icon" src="icons/doc-red.png"></p></a>
-        <a href="players/jacob.html"><p class="link">4) <span style="font-size: 12pt">ジャコブ </span> <img class="icon" src="icons/puff-green.png"></p></a>
-        <a href=""><p class="link">5) Master Kirby <img class="icon" src="icons/kirby-blue.png"></p></a>
-        <a href=""><p class="link">6) K0DU <img class="icon" src="icons/falco-green.png"></p></a>
-        <a href=""><p class="link">7) BoB% <img class="icon" src="icons/samus.png"></p></a>
-        <a href=""><p class="link">8) Orange <img class="icon" src="icons/sheik-green.png"></p></a>
-        <a href=""><p class="link">9) GAN <img class="icon" src="icons/ganon.png"></p></a>
-        <a href=""><p class="link">10) Adam <img class="icon" src="icons/luigi.png"></p></a>
-        <a href=""><p class="link">11) 9QG <img class="icon" src="icons/falco-blue.png"></p></a>
-        <a href=""><p class="link">12) Haven <img class="icon" src="icons/young link-blue.png"></p></a>
-        <a href=""><p class="link">13) Bry <img class="icon" src="icons/sheik-green.png"></p></a>
-        <a href=""><p class="link">14) Carrie <img class="icon" src="icons/kirby.png"></p></a>
-        <a href=""><p class="link">15) Rachel <img class="icon" src="icons/luigi-blue.png"></p></a>
-        <a href=""><p class="link">16) Gracie  <img class="icon" src="icons/sheik-white.png"></p></a>
-        <a href=""><p class="link">17) Carsten  <img class="icon" src="icons/samus.png"></p></a>
-        <a href=""><p class="link">18) Mary Grace <img class="icon" src="icons/link-white.png"></p></a>
-        <a href=""><p class="link">19) Alayna <img class="icon" src="icons/link-white.png"></p></a>
-        <a href=""><p class="link">20) ME <img class="icon" src="icons/link-black.png"></p></a>
-        <a href=""><p class="link">21) Jayleigh  <img class="icon" src="icons/peach.png"></p></a>
-        <a href=""><p class="link">22) Addi <img class="icon" src="icons/kirby.png"></p></a>
-        <a href=""><p class="link">23) Chaitan <img class="icon" src="icons/link.png"></p></a>
-        <a href=""><p class="link">24) Jada <img class="icon" src="icons/peach.png"></p></a>
-        <a href=""><p class="link">25) Jason <img class="icon" src="icons/marth.png"></p></a>
-        <a href=""><p class="link">26) Ellie <img class="icon" src="icons/bowser-blue.png"></p></a>
-        <a href=""><p class="link">27) Piper <img class="icon" src="icons/kirby-yellow.png"></p></a>
-        <a href=""><p class="link">28) Katy <img class="icon" src="icons/sheik-white.png"></p></a>
-        <p style="color: darkgray; text-align: center ;"> Unranked </p>
-        <a href=""><p class="link">Noodle </p></a>
-        <a href=""><p class="link">Geoffrey  </p></a>
-        <a href=""><p class="link">Dixie  </p></a>
-        <a href=""><p class="link">Tracy  </p></a>
+        <!-- The PR is loaded in from melee.js -->
+        <div id="playerList"></div>
+        <p style="color: darkgray; text-align: center;">Unranked</p>
+        <div id="unrankedList"></div>
         <br>
       </div>
     </div>
@@ -75,6 +45,6 @@
       </div>
     </div>
     </div>
-    
   </body>
+  <script src="melee.js"></script>
 </html>
