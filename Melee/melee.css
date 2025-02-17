@@ -1,11 +1,11 @@
-html{
+html {
   color: lavender;
   text-emphasis-color: lavender;
   height: 100%;
   width: 100%;
   display: flex;
   font-size: 16pt;
-  justify-content: safe center;
+  justify-content: center;
   background-attachment: fixed;
 }
 #myVideo {
@@ -17,101 +17,109 @@ html{
   min-width: 100%;
   min-height: 100%;
 }
-img {  
-  max-width: 100%
+img.logo {
+  margin-top: 15px;
+  left: 20px;
+  max-width: 80px;
+  position: absolute;
 }
-h1 {
-  background-color: rgb(30, 30, 30,0.5);
-  font-size: 30pt;
-  text-align: center;
+img.smash.banner {
+  max-width: 720px;
+  width: 100%;
+  height: auto;
 }
+
 div.center {
   position: relative;
   width: 800px;
   border-style: double;
-  background-color: rgb(25,25,25,0.5);
-  background-size: 100%; 
+  background-color: rgb(25, 25, 25, 0.5);
+  background-size: 100%;
+  text-align: center;
+  padding-bottom: 30px;
 }
-h2{
-  margin-top: 0px;
-  margin-bottom: 30px;
-  background-color: lightgoldenrodyellow;
+
+h1 {
+  background-color: rgb(30, 30, 30, 0.5);
+  font-size: 30pt;
   text-align: center;
 }
-h3{
-  margin-top: 0px;
-  margin-bottom: 0px;
+
+h2,
+h3 {
+  text-align: center;
+  margin: 0px;
+  font-size: 25pt;
+}
+
+h2 {
+  background-color: lightgoldenrodyellow;
+}
+
+h3 {
   background-color: lightcyan;
-  text-align: center;
 }
-h4{
-  margin-top: 0px;
-  margin-bottom: 0px;
-  background-color: lightgoldenrodyellow;
-  text-align: center;
-}
+
 div.container {
   display: flex;
+  margin-top: 20px;
 }
-div.pr {
-  margin-left: 40px;
+
+div.left,
+div.right {
   margin-right: 40px;
-  width: 300px;
   color: black;
+  width: 350px;
+}
+
+div.left {
+  margin-left: 40px;
   background-color: white;
   align-items: left;
+  text-align: left;
 }
-div.right{
-  font-size: 30pt;
-  color: black;
-  width: 400px;
-  margin-right: 40px;
-}
-div.tourney{
+
+div.pr, div.tourney {
+  height: 350px;
+  overflow-y: scroll;
   margin-top: 0px;
   margin-bottom: 0px;
   background-color: white;
 }
-div.other{
-  background-color: white;
-}
-p.pr{
-  margin-left: 20px;
-}
-p.tourney{
-    margin-top: 0px;
-  margin-bottom: 0px;
-    text-align: center;
-  background-color: white;
-}
-img.icon{
+
+img.icon {
   margin-bottom: -3px;
   width: 20px;
   height: 20px
 }
-a 
-{ 
-    color: black; 
-    text-decoration: none;
-} 
- 
-a:hover 
-{  
-    color: darkred;
-    background-color: lightgoldenrodyellow;
-} 
-p.link{
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: darkred;
+}
+
+p.link {
+  padding-left: 25px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-p.link:hover{
+
+p.link:hover {
   background-color: lightgoldenrodyellow;
 }
-p.tlink{
+
+.tlink {
+  font-size: 25pt;
   text-align: center;
+  display: block;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-p.tlink:hover{
+
+.tlink:hover {
   background-color: lightcyan;
 }
