@@ -14,7 +14,8 @@ div.header-bar {
 
 div.center {
   background-size: cover; 
-  background-image: url(../Images/Wood\ Background.jpeg); 
+  background-image: url(../Images/Wood\ Background.jpeg);
+  background-attachment: fixed;
   border-style: groove; 
   border-color: black; 
   box-shadow: 3px 3px 5px 5px rgb(50, 50, 50); 
@@ -22,6 +23,7 @@ div.center {
 }
 
 div.container {
+  width: 820px;
   background-image: url(../Images/Tin\ Background.jpg);
   box-shadow: 3px 3px 10px 5px rgb(50, 50, 50) inset;
   border-style: double;

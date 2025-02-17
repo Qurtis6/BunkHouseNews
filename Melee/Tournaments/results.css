@@ -1,11 +1,10 @@
 div.results {
-    width: 725px;
     padding: 10px;
 }
 .box {
     margin: 10px;
     padding: 5px;
-    font-size: 50px;
+    font-size: 40px;
     border-radius: 5px;
     border-style: double;
     border-color: magenta;
@@ -20,14 +19,14 @@ div.results {
     filter: drop-shadow(10px 7px 0px magenta);
 }
 .first {
-    height: 250px;
     width: 250px;
+    height: 250px;
 }
 .second {
-    height: 200px;
     width: 200px;
+    height: 200px;
 }
 .third {
-    height: 180px;
     width: 180px;
+    height: 180px;
 }

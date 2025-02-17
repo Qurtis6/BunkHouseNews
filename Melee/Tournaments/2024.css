@@ -102,7 +102,7 @@ img.banner {
 .modal-content {
   border-radius: 25px;
   background-color: beige;
-  height: auto;
+  margin-top: -20px;
 }
 
 .modal-p-title {
