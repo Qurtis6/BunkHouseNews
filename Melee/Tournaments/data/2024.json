@@ -1,0 +1,500 @@
+{
+    "winners": [
+        {
+            "match": "Grand Final Reset",
+            "p1": "Mozy",
+            "p1icon": ["falco-red"],
+            "p2": "Gouda",
+            "p2icon": ["yoshi-cyan"],
+            "gameResults": [0, 1, 1, 1],
+            "video": "",
+            "children": [
+                {
+                    "match": "Grand Final",
+                    "p1": "Mozy",
+                    "p1icon": ["falco-red"],
+                    "p2": "Gouda",
+                    "p2icon": ["yoshi-cyan"],
+                    "gameResults": [0, 0, 1, 0],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "Winners Final",
+                            "p1": "Gouda",
+                            "p1icon": ["yoshi-cyan"],
+                            "p2": "Mozy",
+                            "p2icon": ["falco-red"],
+                            "gameResults": [0, 1, 0, 0],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Winners Semi-Final",
+                                    "p1": "Gouda",
+                                    "p1icon": ["yoshi-cyan"],
+                                    "p2": "K0DU",
+                                    "p2icon": ["falco-green"],
+                                    "gameResults": [0, 1, 1, 1],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Winners Quarter-Final",
+                                            "p1": "Gouda",
+                                            "p1icon": ["yoshi-cyan"],
+                                            "p2": "Carrie",
+                                            "p2icon": ["kirby"],
+                                            "gameResults": [1, 1],
+                                            "video": "",
+                                            "children": []
+                                        },
+                                        {
+                                            "match": "Winners Quarter-Final",
+                                            "p1": "K0DU",
+                                            "p1icon": ["falco-green"],
+                                            "p2": "Orange",
+                                            "p2icon": ["sheik-green"],
+                                            "gameResults": [1, 0, 1],
+                                            "video": "",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "match": "Winners Final",
+                                    "p1": "Jaco",
+                                    "p1icon": ["puff-green"],
+                                    "p2": "Mozy",
+                                    "p2icon": ["falco-red"],
+                                    "gameResults": [0, 0, 0],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Winners Quarter-Final",
+                                            "p1": "Jaco",
+                                            "p1icon": ["mario"],
+                                            "p2": "Gan",
+                                            "p2icon": ["ganon"],
+                                            "gameResults": [1, 1],
+                                            "video": "",
+                                            "children": []
+                                        },
+                                        {
+                                            "match": "Winners Quarter-Final",
+                                            "p1": "Mozy",
+                                            "p1icon": ["falco-red"],
+                                            "p2": "9QG",
+                                            "p2icon": ["falco-blue"],
+                                            "gameResults": [1, 1],
+                                            "video": "",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "losers": [
+        {
+            "match": "Losers Final",
+            "p1": "Gouda",
+            "p1icon": ["yoshi-cyan"],
+            "p2": "K0DU",
+            "p2icon": ["falco-green"],
+            "gameResults": [1, 0, 1, 0, 1],
+            "video": "",
+            "children": [
+                {
+                    "match": "Losers Semi-Final",
+                    "p1": "Orange",
+                    "p1icon": ["sheik-green"],
+                    "p2": "K0DU",
+                    "p2icon": ["falco-green"],
+                    "gameResults": [1, 0, 0, 0],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "Losers Quarter-Final",
+                            "p1": "Orange",
+                            "p1icon": ["sheik-green"],
+                            "p2": "Jaco",
+                            "p2icon": ["bowser-black"],
+                            "gameResults": [0, 0, 1, 1, 1],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Losers Eighths",
+                                    "p1": "Bry",
+                                    "p1icon": ["samus","sheik","zelda"],
+                                    "p2": "Orange",
+                                    "p2icon": ["sheik-green","luigi"],
+                                    "gameResults": [0, 0, 0],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Round 1",
+                                            "p1": "Bry",
+                                            "p1icon": ["sheik"],
+                                            "p2": "Carrie",
+                                            "p2icon": ["kirby"],
+                                            "gameResults": [0, 0],
+                                            "video": "",
+                                            "children": []
+                                        },
+                                        {
+                                            "match": "Round 1",
+                                            "p1": "Gracie",
+                                            "p1icon": ["sheik-red","sheik-white"],
+                                            "p2": "Orange",
+                                            "p2icon": ["sheik-green","luigi"],
+                                            "gameResults": [0, 0],
+                                            "video": "",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "match": "Losers Semi-Final",
+                            "p1": "Gan",
+                            "p1icon": ["ganon"],
+                            "p2": "K0DU",
+                            "p2icon": ["falco-green","falco-green","g&w","g&w"],
+                            "gameResults": [0, 0, 1, 0],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Losers Eighths",
+                                    "p1": "Gan",
+                                    "p1icon": ["ganon"],
+                                    "p2": "Haven",
+                                    "p2icon": ["marth","marth","young link-blue"],
+                                    "gameResults": [1, 1, 1],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Round 1",
+                                            "p1": "Carsten",
+                                            "p1icon": ["roy-yellow","samus-blue"],
+                                            "p2": "Gan",
+                                            "p2icon": ["ganon"],
+                                            "gameResults": [0, 0],
+                                            "video": "",
+                                            "children": []
+                                        },
+                                        {
+                                            "match": "Round 1",
+                                            "p1": "Haven",
+                                            "p1icon": ["young link-blue"],
+                                            "p2": "9QG",
+                                            "p2icon": ["samus-blue","samus-blue","falco"],
+                                            "gameResults": [0, 1, 1],
+                                            "video": "",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "poolA": [
+        {
+            "match": "PoolA match 1",
+            "p1": "Rachel",
+            "p1icon": ["luigi"],
+            "p2": "Carrie",
+            "p2icon": ["kirby"],
+            "gameResults": [1, 0, 0],
+            "video": "",
+            "children": [
+                {
+                    "match": "PoolA match 1",
+                    "p1": "Jayleigh",
+                    "p1icon": ["peach-white"],
+                    "p2": "Rachel",
+                    "p2icon": ["luigi"],
+                    "gameResults": [0, 0],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "PoolA match 1",
+                            "p1": "Chaiten",
+                            "p1icon": ["link-white"],
+                            "p2": "Jayleigh",
+                            "p2icon": ["peach-white"],
+                            "gameResults": [1, 0, 0],
+                            "video": "",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "poolB": [
+        {
+            "match": "PoolB match 1",
+            "p1": "Carsten",
+            "p1icon": ["samus-blue"],
+            "p2": "Orange",
+            "p2icon": ["sheik-green"],
+            "gameResults": [0, 0],
+            "video": "",
+            "children": [
+                {
+                    "match": "PoolB match 1",
+                    "p1": "Carsten",
+                    "p1icon": ["samus-blue","roy"],
+                    "p2": "Justus",
+                    "p2icon": ["link-black","kirby-white"],
+                    "gameResults": [1, 1],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "PoolB match 1",
+                            "p1": "Carsten",
+                            "p1icon": ["samus-blue"],
+                            "p2": "Addi",
+                            "p2icon": ["kirby-blue"],
+                            "gameResults": [1, 1],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "PoolB match 1",
+                                    "p1": "Carsten",
+                                    "p1icon": ["samus-blue"],
+                                    "p2": "Mary Grace",
+                                    "p2icon": ["link","link-white"],
+                                    "gameResults": [1, 1],
+                                    "video": "",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "poolC": [
+        {
+            "match": "PoolC match 1",
+            "p1": "Gracie",
+            "p1icon": ["sheik-white"],
+            "p2": "Gan",
+            "p2icon": ["ganon"],
+            "gameResults": [0, 0],
+            "video": "",
+            "children": [
+                {
+                    "match": "PoolC match 1",
+                    "p1": "Gracie",
+                    "p1icon": ["marth-white"],
+                    "p2": "Alayna",
+                    "p2icon": ["link-blue"],
+                    "gameResults": [1, 1],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "PoolC match 1",
+                            "p1": "Eva",
+                            "p1icon": ["kirby"],
+                            "p2": "Gracie",
+                            "p2icon": ["samus-blue","falcon"],
+                            "gameResults": [0, 0],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "PoolC match 1",
+                                    "p1": "Eva",
+                                    "p1icon": ["kirby"],
+                                    "p2": "Jada",
+                                    "p2icon": ["peach"],
+                                    "gameResults": [1, 1],
+                                    "video": "",
+                                    "children": []
+                                },
+                                {
+                                    "match": "PoolC match 1",
+                                    "p1": "Gracie",
+                                    "p1icon": ["sheik-green","marth-white"],
+                                    "p2": "Mere",
+                                    "p2icon": ["fox-green","falco-green"],
+                                    "gameResults": [1, 1],
+                                    "video": "",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "poolD": [
+        {
+            "match": "PoolD match 1",
+            "p1": "9QG",
+            "p1icon": ["falco-blue","samus-blue","falco-blue"],
+            "p2": "Bry",
+            "p2icon": ["sheik"],
+            "gameResults": [1, 0, 1],
+            "video": "",
+            "children": [
+                {
+                    "match": "PoolD match 1",
+                    "p1": "Haven",
+                    "p1icon": ["young link-blue","kirby-white"],
+                    "p2": "9QG",
+                    "p2icon": ["falco-blue","falco-green"],
+                    "gameResults": [0, 1, 0],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "PoolD match 1",
+                            "p1": "Ellie",
+                            "p1icon": ["link-blue","kirby-green"],
+                            "p2": "Haven",
+                            "p2icon": ["kirby-white","young link-blue"],
+                            "gameResults": [0, 0],
+                            "video": "",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "poolE": [
+        {
+            "match": "PoolD match 1",
+            "p1": "Bry",
+            "p1icon": ["sheik","sheik","samus-blue"],
+            "p2": "M. Grace",
+            "p2icon": ["link-black","link-black","link-white"],
+            "gameResults": [1, 0, 1],
+            "video": "",
+            "children": [
+                {
+                    "match": "PoolD match 1",
+                    "p1": "Mary Grace",
+                    "p1icon": [""],
+                    "p2": "Jayleigh",
+                    "p2icon": [""],
+                    "gameResults": [1],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "PoolD match 1",
+                            "p1": "M. Grace",
+                            "p1icon": ["link-white"],
+                            "p2": "Eva",
+                            "p2icon": ["kirby"],
+                            "gameResults": [0, 1, 1],
+                            "video": "",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "poolF": [
+        {
+            "match": "PoolD match 1",
+            "p1": "Gracie",
+            "p1icon": ["marth-white"],
+            "p2": "Justus",
+            "p2icon": ["link-black", "kirby-white"],
+            "gameResults": [1, 1],
+            "video": "",
+            "children": [
+                {
+                    "match": "PoolD match 1",
+                    "p1": "Chaitan",
+                    "p1icon": ["link-white"],
+                    "p2": "Justus",
+                    "p2icon": ["link-black", "kirby-white"],
+                    "gameResults": [0, 0],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "PoolD match 1",
+                            "p1": "Chaitan",
+                            "p1icon": ["link-white"],
+                            "p2": "Jada",
+                            "p2icon": ["peach-daisy"],
+                            "gameResults": [1, 1],
+                            "video": "",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "poolG": [
+        {
+            "match": "PoolD match 1",
+            "p1": "Carsten",
+            "p1icon": ["samus-blue"],
+            "p2": "Ellie",
+            "p2icon": ["link-blue"],
+            "gameResults": [1, 1],
+            "video": "",
+            "children": [
+                {
+                    "match": "PoolD match 1",
+                    "p1": "Ellie",
+                    "p1icon": [""],
+                    "p2": "Alayna",
+                    "p2icon": [""],
+                    "gameResults": [1],
+                    "video": "",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "poolH": [
+        {
+            "match": "PoolD match 1",
+            "p1": "Rachel",
+            "p1icon": ["luigi"],
+            "p2": "Haven",
+            "p2icon": ["young link-blue"],
+            "gameResults": [1, 0, 0],
+            "video": "",
+            "children": [
+                {
+                    "match": "PoolD match 1",
+                    "p1": "Addi",
+                    "p1icon": ["kirby-green","kirby-red"],
+                    "p2": "Haven",
+                    "p2icon": ["young link-blue"],
+                    "gameResults": [0, 0],
+                    "video": "",
+                    "children":   [
+                        {
+                            "match": "PoolD match 1",
+                            "p1": "Mere",
+                            "p1icon": ["mewtwo","samus"],
+                            "p2": "Addi",
+                            "p2icon": ["kirby-red","kirby"],
+                            "gameResults": [0, 0],
+                            "video": "",
+                            "children":   []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

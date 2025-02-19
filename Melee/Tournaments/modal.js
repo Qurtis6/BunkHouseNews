@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var modal_video = document.getElementById("modal-video");
 
     // Select all match containers including the winners, losers, and pools
-    var allMatchContainers = document.querySelectorAll("#winnersTop8, #losersTop8, #poolA, #poolB, #poolC, #poolD, #poolE, #poolF, #poolG, #poolH");
+    var allMatchContainers = document.querySelectorAll("#winners, #losers, #poolA, #poolB, #poolC, #poolD, #poolE, #poolF, #poolG, #poolH");
 
     // Event delegation: Listen for clicks on .item-match within these containers
     allMatchContainers.forEach(function(container) {

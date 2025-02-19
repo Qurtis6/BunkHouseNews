@@ -2,23 +2,21 @@
 <html>
 
 <head>
-  <title>2024 Tournament</title>
+  <title>2015 Tournament</title>
   <link href="tournaments.css" rel="stylesheet" type="text/css" />
-  <link href="2024.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic Neue">
 </head>
 
-<body data-json="data/2024.json">
+<body data-json="data/2015.json">
   <div class="center">
 
     <div class="header-bar">
       <a href="../index.html"><img src="../Images/Wehrman Melee Logo.png" class="logo" /></a>
-      <h1>2024 Smash Tournament</h1>
+      <h1>2015 Smash Tournament</h1>
     </div>
 
     <div class="tab">
       <button class="tablinks" id="b-Results" onclick="Section(event, 'Results')">Results</button>
-      <button class="tablinks" id="b-Pools" onclick="Section(event, 'Pools')">Pools</button>
       <button class="tablinks" id="b-Final Bracket" onclick="Section(event, 'Final Bracket')">Final Bracket</button>
     </div>
 
@@ -26,25 +24,10 @@
       coming soon
     </div>
 
-    <div id="Pools" class="container">
-      <div id="poolA"></div> <!-- For Pool A -->
-      <br>
-      <div id="poolB"></div> <!-- For Pool B -->
-      <div id="poolC"></div> <!-- For Pool C -->
-      <div id="poolD"></div> <!-- For Pool D -->
-      losers
-      <div id="poolE"></div> <!-- For Pool A -->
-      <div id="poolF"></div> <!-- For Pool B -->
-      <div id="poolG"></div> <!-- For Pool C -->
-      <div id="poolH"></div> <!-- For Pool D -->
-    </div>
-
     <div id="Final Bracket" class="container">
       <br>
 
       <div id="winners"></div> <!-- For Winners Bracket -->
-      losers
-      <div id="losers"></div> <!-- For Losers Bracket -->
 
       
       <script src="bracket.js"></script> <!-- External JavaScript file -->
@@ -67,10 +50,6 @@
           <td class="p2" style="width: 38%; font-size: 20px;">Mozy</td>
         </table>
         <br>
-        <iframe class="modal-video" id="modal-video" src="" title="YouTube video player"
-          style="border:2px solid black; background-color: black;"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
       </div>
     </div>
   </div>

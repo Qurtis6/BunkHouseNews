@@ -1,0 +1,151 @@
+{
+    "winners": [
+        {
+            "match": "Grand Final",
+            "p1": "Curtis",
+            "p1icon": ["fox-blue"],
+            "p2": "Preston",
+            "p2icon": ["kirby"],
+            "gameResults": [1],
+            "video": "",
+            "children": [
+                {
+                    "match": "Semi-Final",
+                    "p1": "Curtis",
+                    "p1icon": ["fox-blue"],
+                    "p2": "Jacob",
+                    "p2icon": ["puff-green"],
+                    "gameResults": [1],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "Quarter-Final",
+                            "p1": "Andrew",
+                            "p1icon": ["samus"],
+                            "p2": "Curtis",
+                            "p2icon": ["fox-blue"],
+                            "gameResults": [0],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Round 1",
+                                    "p1": "Andrew",
+                                    "p1icon": ["samus"],
+                                    "p2": "Grant",
+                                    "p2icon": ["ganon"],
+                                    "gameResults": [1],
+                                    "video": "",
+                                    "children": []
+                                },
+                                {
+                                    "match": "Round 1",
+                                    "p1": "Joshua",
+                                    "p1icon": ["marth-red"],
+                                    "p2": "Curtis",
+                                    "p2icon": ["fox-blue"],
+                                    "gameResults": [0],
+                                    "video": "",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "match": "Quarter-Final",
+                            "p1": "Jacob",
+                            "p1icon": ["puff-green"],
+                            "p2": "Onyx",
+                            "p2icon": ["link-black"],
+                            "gameResults": [1],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Round 1",
+                                    "p1": "JohnnyBob",
+                                    "p1icon": ["link-black"],
+                                    "p2": "Jacob",
+                                    "p2icon": ["puff-green"],
+                                    "gameResults": [0],
+                                    "video": "",
+                                    "children": []
+                                },
+                                {
+                                    "match": "Round 1",
+                                    "p1": "Addi",
+                                    "p1icon": ["kirby-red"],
+                                    "p2": "Onyx",
+                                    "p2icon": ["link-black"],
+                                    "gameResults": [0],
+                                    "video": "",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "match": "Semi-Final",
+                    "p1": "Preston",
+                    "p1icon": ["kirby"],
+                    "p2": "JohnnyBob",
+                    "p2icon": ["link-black"],
+                    "gameResults": [1],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "Quarter-Final",
+                            "p1": "Titus",
+                            "p1icon": ["kirby-blue"],
+                            "p2": "Preston",
+                            "p2icon": ["kirby"],
+                            "gameResults": [0],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Round 1",
+                                    "p1": "Rachel",
+                                    "p1icon": ["kirby"],
+                                    "p2": "Titus",
+                                    "p2icon": ["kirby-blue"],
+                                    "gameResults": [0],
+                                    "video": "",
+                                    "children": []
+                                },
+                                {
+                                    "match": "Round 1",
+                                    "p1": "Adam",
+                                    "p1icon": ["marth"],
+                                    "p2": "Preston",
+                                    "p2icon": ["kirby"],
+                                    "gameResults": [0],
+                                    "video": "",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "match": "Quarter-Final",
+                            "p1": "Uncle G",
+                            "p1icon": ["mario"],
+                            "p2": "JohnnyBob",
+                            "p2icon": ["link-black"],
+                            "gameResults": [0],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Round 1",
+                                    "p1": "Uncle G",
+                                    "p1icon": ["mario"],
+                                    "p2": "TWizzard",
+                                    "p2icon": ["dk"],
+                                    "gameResults": [1],
+                                    "video": "",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

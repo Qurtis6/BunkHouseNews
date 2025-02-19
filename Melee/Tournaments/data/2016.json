@@ -1,0 +1,154 @@
+{
+    "winners": [
+        {
+            "match": "Grand Final",
+            "p1": "Curtis",
+            "p1icon": ["marth"],
+            "p2": "Andrew",
+            "p2icon": ["sheik-green"],
+            "gameResults": [1],
+            "video": "",
+            "children": [
+                {
+                    "match": "Winners-Final",
+                    "p1": "Curtis",
+                    "p1icon": ["marth"],
+                    "p2": "Andrew",
+                    "p2icon": ["puff-green"],
+                    "gameResults": [1],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "Winners Semi-Final",
+                            "p1": "Curtis",
+                            "p1icon": ["marth"],
+                            "p2": "Joshua",
+                            "p2icon": ["marth-red"],
+                            "gameResults": [1],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Winners Quarter-Final",
+                                    "p1": "Curtis",
+                                    "p1icon": ["marth"],
+                                    "p2": "Titus",
+                                    "p2icon": ["kirby-blue"],
+                                    "gameResults": [1],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Round 2",
+                                            "p1": "Curtis",
+                                            "p1icon": ["marth"],
+                                            "p2": "Jada",
+                                            "p2icon": ["peach"],
+                                            "gameResults": [1],
+                                            "video": "",
+                                            "children": [
+                                                {
+                                                    "match": "Round 1",
+                                                    "p1": "Alayna",
+                                                    "p1icon": ["kirby-blue"],
+                                                    "p2": "Jada",
+                                                    "p2icon": ["peach"],
+                                                    "gameResults": [0],
+                                                    "video": "",
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "match": "Round 2",
+                                            "p1": "Onyx",
+                                            "p1icon": ["link-black"],
+                                            "p2": "Titus",
+                                            "p2icon": ["kirby-blue"],
+                                            "gameResults": [0],
+                                            "video": "",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "match": "Winners Semi-Final",
+                                    "p1": "Caleb",
+                                    "p1icon": ["marth-white"],
+                                    "p2": "Joshua",
+                                    "p2icon": ["marth-red"],
+                                    "gameResults": [0],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Winners Quarter-Final",
+                                            "p1": "Caleb",
+                                            "p1icon": ["marth-white"],
+                                            "p2": "Addi",
+                                            "p2icon": ["kirby-red"],
+                                            "gameResults": [1],
+                                            "video": "",
+                                            "children": [
+                                                {
+                                                    "match": "Round 2",
+                                                    "p1": "Addi",
+                                                    "p1icon": ["kirby-red"],
+                                                    "p2": "Katy",
+                                                    "p2icon": ["pikachu-blue"],
+                                                    "gameResults": [1],
+                                                    "video": "",
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "match": "Winners Quarter-Final",
+                                            "p1": "Joshua",
+                                            "p1icon": ["marth-red"],
+                                            "p2": "John",
+                                            "p2icon": ["link-white"],
+                                            "gameResults": [1],
+                                            "video": "",
+                                            "children": [
+                                                {
+                                                    "match": "Round 2",
+                                                    "p1": "John",
+                                                    "p1icon": ["link-white"],
+                                                    "p2": "Justus",
+                                                    "p2icon": ["link-black"],
+                                                    "gameResults": [1],
+                                                    "video": "",
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "match": "Winners Semi-Final",
+                            "p1": "Andrew",
+                            "p1icon": ["sheik-green"],
+                            "p2": "Jacob",
+                            "p2icon": ["puff-green"],
+                            "gameResults": [1],
+                            "video": "",
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "losers": [
+        {
+            "match": "Losers Final",
+            "p1": "Andrew",
+            "p1icon": ["sheik-green"],
+            "p2": "Johnny",
+            "p2icon": ["link-black"],
+            "gameResults": [1],
+            "video": "",
+            "children": []
+        }
+    ]
+}
