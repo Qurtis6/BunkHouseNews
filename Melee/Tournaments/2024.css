@@ -1,26 +1,22 @@
 html {
-  background: url(../Images/Nummies.jpg) center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  /* background: url(../Images/Nummies.jpg) center center fixed;  */
+  /* need a way to change the background image with js */
   font-family: "Comic Neue", sans-serif;
 }
 
 div.center {
-  margin: auto;
-  background-color: beige;
-  border-radius: 30px;
-  border-style: groove;
+  /* background-color: beige; */
+  /* border-radius: 30px;
+  border-style: groove; */
   border-color: whitesmoke;
+  width: 920px;
+  justify-content: center;
 }
 div.container {
-  background-color: rgb(110, 65, 55);
+  /* background-color: rgb(110, 65, 55); */
   border-style: double;
-  border-radius: 30px;
-  border-style: groove;
-  border-color: whitesmoke;
-  width: 880px;
+  /* border-radius: 30px; */
+  width: fit-content;
 }
 .tablinks {
   font-family: "Comic Neue", sans-serif;
@@ -29,11 +25,13 @@ div.container {
   border-color: rgb(28, 24, 21);
 }
 .tablinks-active {
-  background-image: url(../Images/Wood\ Texture\ 2.jpg);
+  /* background-image: url(../Images/Wood\ Texture\ 2.jpg); */
+  background-color: lavender;
 }
 button.tablinks:hover {
   border-color: white;
 }
+
 .sign {
   padding-left: 10px;
   padding-right: 10px;
@@ -59,19 +57,15 @@ img.banner {
   border-color: rgb(255, 235, 160);
 }
 
-.item-match-0 {
-  height: 50px;
-  width: 125px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-  border-width: 3px;
-  border-style: solid;
-  background-color: lightyellow;
-  border-color: rgb(255, 235, 160);
+img.icon{
+  margin-bottom: 0px;
+  margin-right: 0px;
+  /* can probably get rid of with js added to all brackets */
+}
+img.icon-loss{
+  margin-bottom: 0px;
+  margin-right: 0px;
+  /* can probably get rid of with js added to all brackets */
 }
 
 .underline {
@@ -81,7 +75,7 @@ img.banner {
 .item-match:hover {
   border-color: whitesmoke;
   background-color: rgb(245, 245, 220);
-  box-shadow: 2px 2px 10px 2px lightgreen;
+  /* box-shadow: 2px 2px 10px 2px lightgreen; */
 }
 
 .item-child:before {
@@ -106,7 +100,7 @@ img.banner {
 }
 
 .modal-p-title {
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  /* border-top-left-radius: 30px;
+  border-top-right-radius: 30px; */
   background-color: bisque;
 }
