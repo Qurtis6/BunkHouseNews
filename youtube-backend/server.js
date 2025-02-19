@@ -13,7 +13,7 @@ app.use(cors());
 app.get('/api/videos', async (req, res) => {
     try {
         const playlistIds = [
-            "PLSuPSOIxFu9rwSZgXuv8yHIlOTZWv3ayy", // Add more playlist IDs here
+            "PL-0ud66ADHGFdVDSUO_8bUX3GIJM3Eisw", // Add more playlist IDs here
         ];
         
         let videoQueue = [];
