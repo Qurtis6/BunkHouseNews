@@ -3,74 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Video Player</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>YouTube Video Player</title>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; }
         #video-container { max-width: 640px; margin: auto; }
-        video { width: 100%; }
         .controls { margin-top: 10px; }
         button { margin: 5px; }
     </style>
-    <nav id="nav"></nav>
-    <script src="nav.js"></script>
+<nav id="nav"></nav>
+<script src="nav.js"></script>
 </head>
+
 <body>
-    <h2>Custom Video Player</h2>
+    <h2>YouTube Video Player</h2>
     <div id="video-container">
-        <video id="videoPlayer" controls></video>
-        <div class="controls">
-            <button onclick="playVideo()">Play</button>
-            <button onclick="pauseVideo()">Pause</button>
-            <button onclick="stopVideo()">Stop</button>
-            <button onclick="toggleFullscreen()">Fullscreen</button>
-            <button onclick="setSpeed(2)">2x Speed</button>
-            <input type="range" id="volume" min="0" max="1" step="0.1" onchange="setVolume()">
-        </div>
-        <input type="password" id="uploadPassword" placeholder="Enter password">
-        <input type="file" id="videoUpload" accept="video/*" onchange="handleFileUpload()">
+        <div id="player"></div>
     </div>
+    
     <script>
-        const videoPlayer = document.getElementById("videoPlayer");
-        const videoQueue = [];
+        let player;
+        let videoQueue = [];
         let currentVideoIndex = 0;
         
-        function playVideo() { videoPlayer.play(); }
-        function pauseVideo() { videoPlayer.pause(); }
-        function stopVideo() { videoPlayer.pause(); videoPlayer.currentTime = 0; }
-        function toggleFullscreen() {
-            if (videoPlayer.requestFullscreen) { videoPlayer.requestFullscreen(); }
-        }
-        function setSpeed(speed) { videoPlayer.playbackRate = speed; }
-        function setVolume() { videoPlayer.volume = document.getElementById("volume").value; }
+        // Predefined playlists
+        const playlistIds = [
+            "PLSuPSOIxFu9rwSZgXuv8yHIlOTZWv3ayy",
+        ];
         
-        function handleFileUpload() {
-            const password = document.getElementById("uploadPassword").value;
-            if (password !== "secure123") { // Change "secure123" to your desired password
-                alert("Incorrect password!");
-                return;
-            }
-            const file = document.getElementById("videoUpload").files[0];
-            if (file) {
-                const fileURL = URL.createObjectURL(file);
-                videoQueue.push(fileURL);
-                if (videoQueue.length === 1) {
-                    playNextVideo();
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '390',
+                width: '640',
+                events: {
+                    'onReady': loadPlaylists,
+                    'onStateChange': onPlayerStateChange
                 }
+            });
+        }
+        
+        function loadPlaylists() {
+            let fetchPromises = playlistIds.map(id => fetchPlaylistVideos(id));
+            Promise.all(fetchPromises).then(() => {
+                shuffleQueue();
+                playNextVideo();
+            });
+        }
+        
+        function fetchPlaylistVideos() {
+    return fetch('http://localhost:5000/api/videos')
+        .then(response => response.json())
+        .then(data => {
+            videoQueue = data.videos;
+        })
+        .catch(error => console.error("Error fetching videos:", error));
+}
+        
+        function shuffleQueue() {
+            for (let i = videoQueue.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [videoQueue[i], videoQueue[j]] = [videoQueue[j], videoQueue[i]];
             }
         }
         
         function playNextVideo() {
             if (videoQueue.length > 0) {
-                videoPlayer.src = videoQueue[currentVideoIndex];
-                videoPlayer.play();
+                if (currentVideoIndex >= videoQueue.length) {
+                    currentVideoIndex = 0;
+                    shuffleQueue();
+                }
+                player.loadVideoById(videoQueue[currentVideoIndex]);
+                currentVideoIndex++;
             }
         }
         
-        videoPlayer.onended = function() {
-            currentVideoIndex = (currentVideoIndex + 1) % videoQueue.length;
-            playNextVideo();
-        };
+        function onPlayerStateChange(event) {
+            if (event.data === YT.PlayerState.ENDED) {
+                playNextVideo();
+            }
+        }
     </script>
 </body>
 </html>
