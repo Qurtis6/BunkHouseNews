@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "Ellie", icon: "link-blue.png" },
         { name: "Piper", icon: "kirby-yellow.png" },
         { name: "Katy", icon: "sheik-white.png" },
+        { name: "Mere", icon: "fox-green.png" },
     ];
 
     const unrankedPlayers = ["Noodle", "Geoffrey", "Dixie", "Tracy"];
