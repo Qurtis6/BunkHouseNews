@@ -132,7 +132,103 @@
                             "p2icon": ["puff-green"],
                             "gameResults": [1],
                             "video": "",
-                            "children": []
+                            "children": [
+                                {
+                                    "match": "Winners Quarter-Final",
+                                    "p1": "Andrew",
+                                    "p1icon": ["sheik-green"],
+                                    "p2": "Preston",
+                                    "p2icon": ["link"],
+                                    "gameResults": [1],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Round 2",
+                                            "p1": "Andrew",
+                                            "p1icon": ["ICs-orange"],
+                                            "p2": "Piper",
+                                            "p2icon": ["kirby-yellow"],
+                                            "gameResults": [1],
+                                            "video": "",
+                                            "children": [
+                                                {
+                                                    "match": "Round 1",
+                                                    "p1": "Piper",
+                                                    "p1icon": ["kirby-yellow"],
+                                                    "p2": "Jason",
+                                                    "p2icon": ["marth"],
+                                                    "gameResults": [1],
+                                                    "video": "",
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "match": "Round 2",
+                                            "p1": "Preston",
+                                            "p1icon": ["link"],
+                                            "p2": "Grant",
+                                            "p2icon": ["ganon"],
+                                            "gameResults": [1],
+                                            "video": "",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "match": "Winners Quarter-Final",
+                                    "p1": "Jacob",
+                                    "p1icon": ["puff-green"],
+                                    "p2": "Johnny",
+                                    "p2icon": ["link-black"],
+                                    "gameResults": [1],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Round 2",
+                                            "p1": "Jacob",
+                                            "p1icon": ["puff-green"],
+                                            "p2": "Carrie",
+                                            "p2icon": ["kirby"],
+                                            "gameResults": [1],
+                                            "video": "",
+                                            "children": [
+                                                {
+                                                    "match": "Round 1",
+                                                    "p1": "Carrie",
+                                                    "p1icon": ["kirby"],
+                                                    "p2": "Rachel",
+                                                    "p2icon": ["kirby-blue"],
+                                                    "gameResults": [1],
+                                                    "video": "",
+                                                    "children": []
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "match": "Round 2",
+                                            "p1": "Adam",
+                                            "p1icon": ["marth"],
+                                            "p2": "Johnny",
+                                            "p2icon": ["yoshi"],
+                                            "gameResults": [0],
+                                            "video": "",
+                                            "children": [
+                                                {
+                                                    "match": "Round 1",
+                                                    "p1": "Johnny",
+                                                    "p1icon": ["link-black"],
+                                                    "p2": "Geoffrey",
+                                                    "p2icon": ["mario"],
+                                                    "gameResults": [1],
+                                                    "video": "",
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }
@@ -148,7 +244,211 @@
             "p2icon": ["link-black"],
             "gameResults": [1],
             "video": "",
-            "children": []
+            "children": [
+                {
+                    "match": "Losers Semi-Final",
+                    "p1": "Caleb",
+                    "p1icon": ["marth-white"],
+                    "p2": "Johnny",
+                    "p2icon": ["link-black"],
+                    "gameResults": [0],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "Losers Quarter-Final",
+                            "p1": "Joshua",
+                            "p1icon": ["marth-red"],
+                            "p2": "Caleb",
+                            "p2icon": ["marth-white"],
+                            "gameResults": [1],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Losers Round 4",
+                                    "p1": "Grant",
+                                    "p1icon": ["ganon"],
+                                    "p2": "Caleb",
+                                    "p2icon": ["marth-white"],
+                                    "gameResults": [0],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Losers Round 3",
+                                            "p1": "Titus",
+                                            "p1icon": ["kirby-blue"],
+                                            "p2": "Grant",
+                                            "p2icon": ["ganon"],
+                                            "gameResults": [0],
+                                            "video": "",
+                                            "children": [
+                                                {
+                                                    "match": "Losers Round 2",
+                                                    "p1": "Alayna",
+                                                    "p1icon": ["kirby-blue"],
+                                                    "p2": "Grant",
+                                                    "p2icon": ["ganon"],
+                                                    "gameResults": [0],
+                                                    "video": "",
+                                                    "children": [
+                                                        {
+                                                            "match": "Losers Round 1",
+                                                            "p1": "Piper",
+                                                            "p1icon": ["kirby"],
+                                                            "p2": "Alayna",
+                                                            "p2icon": ["kirby-blue"],
+                                                            "gameResults": [0],
+                                                            "video": "",
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "match": "Losers Round 3",
+                                            "p1": "Caleb",
+                                            "p1icon": ["marth-white"],
+                                            "p2": "Adam",
+                                            "p2icon": ["marth"],
+                                            "gameResults": [1],
+                                            "video": "",
+                                            "children": [
+                                                {
+                                                    "match": "Losers Round 2",
+                                                    "p1": "Carrie",
+                                                    "p1icon": ["kirby"],
+                                                    "p2": "Adam",
+                                                    "p2icon": ["marth"],
+                                                    "gameResults": [0],
+                                                    "video": "",
+                                                    "children": [
+                                                        {
+                                                            "match": "Losers Round 1",
+                                                            "p1": "Carrie",
+                                                            "p1icon": ["kirby"],
+                                                            "p2": "Katy",
+                                                            "p2icon": ["pikachu-blue"],
+                                                            "gameResults": [1],
+                                                            "video": "",
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "match": "Losers Round 1",
+                                                            "p1": "Adam",
+                                                            "p1icon": ["marth"],
+                                                            "p2": "Justus",
+                                                            "p2icon": ["link-black"],
+                                                            "gameResults": [1],
+                                                            "video": "",
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "match": "Losers Quarter-Final",
+                            "p1": "Jacob",
+                            "p1icon": ["puff-green"],
+                            "p2": "Johnny",
+                            "p2icon": ["link-black"],
+                            "gameResults": [0],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Losers Round 4",
+                                    "p1": "Onyx",
+                                    "p1icon": ["link-black"],
+                                    "p2": "Johnny",
+                                    "p2icon": ["link"],
+                                    "gameResults": [0],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Losers Round 3",
+                                            "p1": "Preston",
+                                            "p1icon": ["link"],
+                                            "p2": "Onyx",
+                                            "p2icon": ["link-black"],
+                                            "gameResults": [0],
+                                            "video": "",
+                                            "children": [
+                                                {
+                                                    "match": "Losers Round 2",
+                                                    "p1": "Jada",
+                                                    "p1icon": ["peach"],
+                                                    "p2": "Onyx",
+                                                    "p2icon": ["link-black"],
+                                                    "gameResults": [0],
+                                                    "video": "",
+                                                    "children": [
+                                                        {
+                                                            "match": "Losers Round 1",
+                                                            "p1": "Jada",
+                                                            "p1icon": ["peach"],
+                                                            "p2": "Jason",
+                                                            "p2icon": ["marth"],
+                                                            "gameResults": [1],
+                                                            "video": "",
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "match": "Losers Round 3",
+                                            "p1": "Johnny",
+                                            "p1icon": ["link-black"],
+                                            "p2": "Addi",
+                                            "p2icon": ["kirby-red"],
+                                            "gameResults": [1],
+                                            "video": "",
+                                            "children": [
+                                                {
+                                                    "match": "Losers Round 2",
+                                                    "p1": "Addi",
+                                                    "p1icon": ["kirby-red"],
+                                                    "p2": "Geoffrey",
+                                                    "p2icon": ["mario"],
+                                                    "gameResults": [1],
+                                                    "video": "",
+                                                    "children": [
+                                                        {
+                                                            "match": "Losers Round 1",
+                                                            "p1": "Addi",
+                                                            "p1icon": ["kirby-red"],
+                                                            "p2": "Rachel",
+                                                            "p2icon": ["kirby"],
+                                                            "gameResults": [1],
+                                                            "video": "",
+                                                            "children": []
+                                                        },
+                                                        {
+                                                            "match": "Losers Round 1",
+                                                            "p1": "John",
+                                                            "p1icon": ["link-white"],
+                                                            "p2": "Geoffrey",
+                                                            "p2icon": ["mario"],
+                                                            "gameResults": [0],
+                                                            "video": "",
+                                                            "children": []
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
