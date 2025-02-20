@@ -1,0 +1,198 @@
+{
+    "winners": [
+        {
+            "match": "Grand Finals",
+            "p1": "Curtis",
+            "p1icon": ["marth"],
+            "p2": "Preston",
+            "p2icon": ["fox"],
+            "gameResults": [1, 1],
+            "video": "",
+            "children": [
+                {
+                    "match": "Winners Finals",
+                    "p1": "Curtis",
+                    "p1icon": ["marth"],
+                    "p2": "Joshua",
+                    "p2icon": ["marth-red"],
+                    "gameResults": [1, 0, 1],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "Winners Semi-Final",
+                            "p1": "Curtis",
+                            "p1icon": ["marth"],
+                            "p2": "Preston",
+                            "p2icon": ["fox"],
+                            "gameResults": [1, 1],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Winners Quarter-Final",
+                                    "p1": "Preston",
+                                    "p1icon": ["fox"],
+                                    "p2": "Onyx",
+                                    "p2icon": ["falcon"],
+                                    "gameResults": [1, 1],
+                                    "video": "",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "match": "Winners Semi-Final",
+                            "p1": "Jacob",
+                            "p1icon": ["puff-green"],
+                            "p2": "Joshua",
+                            "p2icon": ["marth-red"],
+                            "gameResults": [0, 1, 1],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Winners Quarter-Final",
+                                    "p1": "Joshua",
+                                    "p1icon": ["marth-red"],
+                                    "p2": "Andrew",
+                                    "p2icon": ["sheik-green"],
+                                    "gameResults": [1, 1],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Winners Round 1",
+                                            "p1": "Joshua",
+                                            "p1icon": ["marth-red"],
+                                            "p2": "Caleb",
+                                            "p2icon": ["marth-white"],
+                                            "gameResults": [1, 0, 1],
+                                            "video": "",
+                                            "children": []
+                                        },
+                                        {
+                                            "match": "Winners Round 1",
+                                            "p1": "Andrew",
+                                            "p1icon": ["sheik-green"],
+                                            "p2": "Titus",
+                                            "p2icon": ["falco-green"],
+                                            "gameResults": [0, 1, 1],
+                                            "video": "",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "match": "Winners Quarter-Final",
+                                    "p1": "Jacob",
+                                    "p1icon": ["puff-green"],
+                                    "p2": "Johnny",
+                                    "p2icon": ["samus"],
+                                    "gameResults": [1, 0, 1],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Winners Round 1",
+                                            "p1": "Johnny",
+                                            "p1icon": ["samus"],
+                                            "p2": "Grant",
+                                            "p2icon": ["ganon"],
+                                            "gameResults": [1, 1],
+                                            "video": "",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "losers": [
+        {
+            "match": "Losers Finals",
+            "p1": "Andrew",
+            "p1icon": ["sheik-green"],
+            "p2": "Preston",
+            "p2icon": ["fox"],
+            "gameResults": [0, 0],
+            "video": "",
+            "children": [
+                {
+                    "match": "Losers Semi-Finals",
+                    "p1": "Andrew",
+                    "p1icon": ["sheik-green"],
+                    "p2": "Joshua",
+                    "p2icon": ["marth-red"],
+                    "gameResults": [1, 0, 1],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "Losers Quarter-Finals",
+                            "p1": "Jacob",
+                            "p1icon": ["puff-green"],
+                            "p2": "Joshua",
+                            "p2icon": ["marth-red"],
+                            "gameResults": [1, 0, 0],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Losers Round 2",
+                                    "p1": "Jacob",
+                                    "p1icon": ["puff-green"],
+                                    "p2": "Johnny",
+                                    "p2icon": ["samus"],
+                                    "gameResults": [1, 0, 1],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Losers Round 1",
+                                            "p1": "Johnny",
+                                            "p1icon": ["samus"],
+                                            "p2": "Grant",
+                                            "p2icon": ["ganon"],
+                                            "gameResults": [1, 1],
+                                            "video": "",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "match": "Losers Semi-Finals",
+                    "p1": "Preston",
+                    "p1icon": ["fox"],
+                    "p2": "Jacob",
+                    "p2icon": ["puff-green"],
+                    "gameResults": [1, 1],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "Losers Quarter-Finals",
+                            "p1": "Preston",
+                            "p1icon": ["fox"],
+                            "p2": "Caleb",
+                            "p2icon": ["marth-white"],
+                            "gameResults": [1, 1],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Losers Round 2",
+                                    "p1": "Johnny",
+                                    "p1icon": ["link-black"],
+                                    "p2": "Caleb",
+                                    "p2icon": ["marth-white"],
+                                    "gameResults": [0, 0],
+                                    "video": "",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
