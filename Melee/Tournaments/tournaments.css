@@ -89,10 +89,12 @@ div.parent {
   border-bottom: 2px solid rgb(225, 225, 225);
 }
 img.icon{
+  margin-bottom: -2px;
   height: 15px;
   width: 15px;
 }
 img.icon-loss{
+  margin-bottom: -2px;
   opacity: 0.3;
   height: 15px;
   width: 15px;
