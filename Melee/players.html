@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Profile</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .icon { width: 100px; height: auto; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1 id="playerTag"></h1>
+    <h2 id="playerName"></h2>
+    <img id="playerIcon" class="icon" alt="Player Icon">
+
+    <script>
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                name: params.get("name") || "Unknown",
+                tag: params.get("tag") || "No Tag",
+                icon: params.get("icon")
+            };
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const { name, tag, icon } = getQueryParams();
+
+            document.getElementById("playerTag").textContent = tag;
+            document.getElementById("playerName").textContent = `(${name})`;
+            
+            const iconElement = document.getElementById("playerIcon");
+            if (icon) {
+                iconElement.src = `icons/${icon}.png`;
+            } else {
+                iconElement.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
