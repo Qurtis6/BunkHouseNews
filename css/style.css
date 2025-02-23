@@ -142,42 +142,25 @@ h1 {
   display: flex;
   justify-content: center;
 }
+
 /* MEET THE BUNK HOUSE */
 .meet-container {
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 2fr 5fr 2fr;
   margin-top: 16px;
   justify-items: center;
   margin-bottom: 24px;
-}
-.meet-container img {
-  max-width: 100%;
-  height: auto;
-  justify-self: center;
-  padding-top: 24px;
 }
 .meet-container div {
   display: flex;
   grid-column-start: 2;
   justify-content: center;
 }
-.meet1 img {
-  max-width: 55%;
-}
-.meet5 img {
-  max-width: 55%;
-}
-.meet7 img {
-  max-width: 55%;
-}
-.meet8 img {
-  max-width: 55%;
-}
-.meet10 img {
-  max-width: 80%;
-}
-.meet11 img {
-  max-width: 32%;
+.meet-container img {
+  width: 450px;
+  height: 100%;
+  justify-self: center;
+  padding-top: 28px;
 }
 
 /* HISTORY */
@@ -216,6 +199,12 @@ h1 {
   max-width: 160%;
 }
 
+/* BUNKHOUSE TV */
+#video-container {
+  max-width: 640px;
+  margin: auto;
+}
+
 /* FOOTER */
 .titus {
   display: flex;
@@ -241,10 +230,10 @@ h1 {
     background-color: #6e9075;
     height: 100vh;
     width: 100%;
-    max-width: 85vw;
+    max-width: 82vw;
     position: fixed;
     top: 0;
-    right: -85vw;
+    right: -82vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,7 +269,7 @@ h1 {
   .ham-menu {
     height: 50px;
     width: 40px;
-    margin-right: 12 px;
+    margin-right: 12px;
     margin-left: auto;
     position: relative;
     align-self: right;
@@ -324,6 +313,14 @@ h1 {
   }
   .art {
     margin-bottom: 24px;
+  }
+
+  #video-container {
+    width: 95vw;
+    height: auto;
+  }
+  #player {
+    width: 100%;
   }
 }
 /******************* END MOBILE VERSION ********************/
