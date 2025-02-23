@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player Profile</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        .icon { width: 100px; height: auto; margin-top: 10px; }
-    </style>
+    <link href="Tournaments/tournaments.css" rel="stylesheet" type="text/css"/>
+    <title>Wehrman Melee</title>
 </head>
+
 <body>
-    <h1 id="playerTag"></h1>
-    <h2 id="playerName"></h2>
-    <img id="playerIcon" class="icon" alt="Player Icon">
+    <div id="background" class="background"></div>
+      <div class="center">
+    
+        <div class="header-bar">
+          <a href="index.html"><img src="Images/Wehrman Melee Logo.png" class="logo" /></a>
+          <h1 id="playerTag"></h1>
+        </div>
+    
+        <div id="Final Bracket" class="container">
+          <br>
+          <img id="playerChar" alt="Player Character">
+          <div id="winners"></div> <!-- For Winners Bracket -->
+          <h2 id="playerName"></h2>
+          
+          <!-- <script src="bracket.js"></script> -->
+    
+          <br>
+        </div>
+        <br>
+      </div>
+      <div class="modal" id="myModal">
+        <!-- Modal content -->
+        <div class="modal-div">
+          <span class="close">&times; Close</span>
+          <div class="modal-content">
+            <p class="modal-p-title" id="modal-p-title">Name here</p>
+            <table id="modal-table" style="width: 100%;">
+              <td class="p1" style="width: 38%; text-align: right; font-size: 20px;">PWRM</td>
+              <td class="p1wins" style="width: 10%; text-align: center; font-size: 30px;">2</td>
+              <td style="width: 4%; text-align: center;">vs</td>
+              <td class="p2wins" style="width: 10%; text-align: center; font-size: 30px;">0</td>
+              <td class="p2" style="width: 38%; font-size: 20px;">Mozy</td>
+            </table>
+            <br>
+          </div>
+        </div>
+      </div>
+      <script src="Tournaments/modal.js"></script>
 
-    <script>
-        function getQueryParams() {
-            const params = new URLSearchParams(window.location.search);
-            return {
-                name: params.get("name") || "Unknown",
-                tag: params.get("tag") || "No Tag",
-                icon: params.get("icon")
-            };
-        }
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const { name, tag, icon } = getQueryParams();
-
-            document.getElementById("playerTag").textContent = tag;
-            document.getElementById("playerName").textContent = `(${name})`;
-            
-            const iconElement = document.getElementById("playerIcon");
-            if (icon) {
-                iconElement.src = `icons/${icon}.png`;
-            } else {
-                iconElement.style.display = "none";
-            }
-        });
-    </script>
+    <script src="players.js"></script>
 </body>
 </html>
