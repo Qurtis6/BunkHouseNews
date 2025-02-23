@@ -22,6 +22,9 @@ div.background {
   background-position: 40% 45%;
   background-size: 200px 200px;
   transform: rotate(-10deg) scale(1.5);
+  background-image: url(../Images/Symbols/fox.svg);
+  background-color: rgb(14, 31, 12);
+  filter: hue-rotate(90deg);
 }
 img {  
   max-width: 100%
