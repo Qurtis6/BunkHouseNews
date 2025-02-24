@@ -1,4 +1,20 @@
 {
+    "results":[
+        { "place": 1, "name": "Curtis", "tag": "", "icon": ["fox-blue"] },
+        { "place": 2, "name": "Preston", "tag": "", "icon": "kirby" },
+        { "place": 3, "name": "Jacob", "tag": "", "icon": "puff-green" },
+        { "place": 4, "name": "Johnny", "tag": "JohnnyBob", "icon": "link-black" },
+        { "place": 5, "name": "Geoffrey", "tag": "Uncle G", "icon": "mario" },
+        { "place": 5, "name": "Titus", "tag": "", "icon": "kirby-blue" },
+        { "place": 5, "name": "Onyx", "tag": "", "icon": "link-black" },
+        { "place": 5, "name": "Andrew", "tag": "", "icon": "samus" },
+        { "place": 9, "name": "Adam", "tag": "", "icon": "marth" },
+        { "place": 10, "name": "Tracy", "tag": "TWizzard", "icon": "dk" },
+        { "place": 10, "name": "Rachel", "tag": "", "icon": "kirby" },
+        { "place": 10, "name": "Addi", "tag": "", "icon": "kirby-red" },
+        { "place": 10, "name": "Joshua", "tag": "", "icon": "marth-red" },
+        { "place": 10, "name": "Grant", "tag": "", "icon": "ganon" }
+    ],
     "winners": [
         {
             "match": "Grand Final",

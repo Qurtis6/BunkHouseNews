@@ -22,6 +22,7 @@
     <div class="tab">
       <button class="tablinks" id="b-Results" onclick="Section(event, 'Results')">Results</button>
       <button class="tablinks" id="b-Final Bracket" onclick="Section(event, 'Final Bracket')">Final Bracket</button>
+      <button class="tablinks" id="b-Kids Bracket" onclick="Section(event, 'Kids Bracket')">Kids Bracket</button>
     </div>
 
     <div id="Results" class="container">
@@ -48,12 +49,39 @@
       <br>&emsp;Loser's Bracket
       <br><br>
       <div id="losers"></div>
-      <script src="bracket.js"></script> <!-- External JavaScript file -->
+    </div>
+
+    <div id="Kids Bracket" class="container">
+      <div id="poolA"></div>
+      <br>&emsp;Loser's Bracket
+      <br><br>
+      <div id="poolB"></div>
     </div>
 
     <br>
   </div>
-  <script src="tournament.js"></script>
+  <div class="modal" id="myModal">
+    <!-- Modal content -->
+    <div class="modal-div">
+      <span class="close">&times; Close</span>
+      <div class="modal-content">
+        <p class="modal-p-title" id="modal-p-title">Name here</p>
+        <table id="modal-table" style="width: 100%;">
+          <td class="p1" style="width: 38%; text-align: right; font-size: 20px;">PWRM</td>
+          <td class="p1wins" style="width: 10%; text-align: center; font-size: 30px;">2</td>
+          <td style="width: 4%; text-align: center;">vs</td>
+          <td class="p2wins" style="width: 10%; text-align: center; font-size: 30px;">0</td>
+          <td class="p2" style="width: 38%; font-size: 20px;">Mozy</td>
+        </table>
+        <br>
+        <iframe class="modal-video" id="modal-video" src="" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <script src="bracket.js"></script> <!-- External JavaScript file -->
+  <script src="modal.js"></script>
 </body>
 
 

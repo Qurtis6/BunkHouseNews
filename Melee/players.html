@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="Tournaments/tournaments.css" rel="stylesheet" type="text/css"/>
+    <link href="players.css" rel="stylesheet" type="text/css"/>
     <title>Wehrman Melee</title>
 </head>
 
@@ -16,13 +17,14 @@
           <a href="index.html"><img src="Images/Wehrman Melee Logo.png" class="logo" /></a>
           <h1 id="playerTag"></h1>
         </div>
-    
+
         <div id="Final Bracket" class="container">
-          <br>
-          <img id="playerChar" alt="Player Character">
+          <p id="rank"></p>
+          <img id="playerChar" class="playerChar" alt="Player Character">
           <div id="winners"></div> <!-- For Winners Bracket -->
           <h2 id="playerName"></h2>
-          
+          <div id="player-bracket"></div>
+
           <!-- <script src="bracket.js"></script> -->
     
           <br>
@@ -43,10 +45,14 @@
               <td class="p2" style="width: 38%; font-size: 20px;">Mozy</td>
             </table>
             <br>
+            <iframe class="modal-video" id="modal-video" src="" title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
           </div>
         </div>
       </div>
       <script src="Tournaments/modal.js"></script>
+      <script src="matches.js"></script>
 
 
     <script src="players.js"></script>

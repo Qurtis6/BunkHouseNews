@@ -1,18 +1,32 @@
 Section("", "Final Bracket");
 function Section(evt, section) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("container");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.remove("tablinks-active");
-  }
-  document.getElementById(section).style.display = "block";
-  document.getElementById("b-" + section).classList.add("tablinks-active");
-  // evt.currentTarget.className += " active";
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("container");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("tablinks-active");
+    }
+
+    var sectionElement = document.getElementById(section);
+    if (sectionElement) {
+        sectionElement.style.display = "block";
+    } else {
+        console.error(`Section "${section}" not found in the DOM.`);
+    }
+
+    var buttonElement = document.getElementById("b-" + section);
+    
+    // ✅ Only modify button if it exists
+    if (buttonElement) {
+        buttonElement.classList.add("tablinks-active");
+    }
 }
+
 
 // Update the modal event listener to check for all the relevant match containers
 document.addEventListener("DOMContentLoaded", function () {
@@ -23,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var modal_video = document.getElementById("modal-video");
 
     // Select all match containers including the winners, losers, and pools
-    var allMatchContainers = document.querySelectorAll("#winners, #losers, #poolA, #poolB, #poolC, #poolD, #poolE, #poolF, #poolG, #poolH");
+    var allMatchContainers = document.querySelectorAll("#winners, #losers, #poolA, #poolB, #poolC, #poolD, #poolE, #poolF, #poolG, #poolH, #player-bracket");
 
     // Event delegation: Listen for clicks on .item-match within these containers
     allMatchContainers.forEach(function(container) {

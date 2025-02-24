@@ -194,5 +194,221 @@
                 }
             ]
         }
+    ],
+    "poolA": [
+        {
+            "match": "Grand Finals",
+            "p1": "Piper",
+            "p1icon": ["kirby-yellow"],
+            "p2": "Jason",
+            "p2icon": ["marth"],
+            "gameResults": [1],
+            "video": "",
+            "children": [
+                {
+                    "match": "Winners Finals",
+                    "p1": "Carrie",
+                    "p1icon": ["kirby"],
+                    "p2": "Piper",
+                    "p2icon": ["kirby-yellow"],
+                    "gameResults": [0],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "Winners Semi-Final",
+                            "p1": "Carrie",
+                            "p1icon": ["kirby"],
+                            "p2": "Haven",
+                            "p2icon": ["young link-blue"],
+                            "gameResults": [1],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Winners Quarter-Final",
+                                    "p1": "Justus",
+                                    "p1icon": ["link-black"],
+                                    "p2": "Carrie",
+                                    "p2icon": ["kirby"],
+                                    "gameResults": [0],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Winners Round 1",
+                                            "p1": "Rachel",
+                                            "p1icon": ["kirby"],
+                                            "p2": "Justus",
+                                            "p2icon": ["link-black"],
+                                            "gameResults": [0],
+                                            "video": "",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "match": "Winners Quarter-Final",
+                                    "p1": "Haven",
+                                    "p1icon": ["young link-blue"],
+                                    "p2": "John",
+                                    "p2icon": ["link-white"],
+                                    "gameResults": [0],
+                                    "video": "",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "match": "Winners Semi-Final",
+                            "p1": "Piper",
+                            "p1icon": ["kirby-yellow"],
+                            "p2": "Jason",
+                            "p2icon": ["marth"],
+                            "gameResults": [1],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Winners Quarter-Final",
+                                    "p1": "Alayna",
+                                    "p1icon": ["kirby-blue"],
+                                    "p2": "Piper",
+                                    "p2icon": ["kirby-yellow"],
+                                    "gameResults": [0],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Winners Round 1",
+                                            "p1": "Alayna",
+                                            "p1icon": ["kirby-blue"],
+                                            "p2": "Ellie",
+                                            "p2icon": ["bowser-blue"],
+                                            "gameResults": [1],
+                                            "video": "",
+                                            "children": []
+                                        },
+                                        {
+                                            "match": "Winners Round 1",
+                                            "p1": "Piper",
+                                            "p1icon": ["kirby-yellow"],
+                                            "p2": "Brylee",
+                                            "p2icon": ["sheik"],
+                                            "gameResults": [1],
+                                            "video": "",
+                                            "children": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "match": "Winners Quarter-Final",
+                                    "p1": "Katy",
+                                    "p1icon": ["pikachu-blue"],
+                                    "p2": "Jason",
+                                    "p2icon": ["marth"],
+                                    "gameResults": [0],
+                                    "video": "",
+                                    "children": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "poolB": [
+        {
+            "match": "Losers Finals",
+            "p1": "Carrie",
+            "p1icon": ["kirby"],
+            "p2": "Jason",
+            "p2icon": ["marth"],
+            "gameResults": [0],
+            "video": "",
+            "children": [
+                {
+                    "match": "Losers Semi-Finals",
+                    "p1": "Jason",
+                    "p1icon": ["marth"],
+                    "p2": "John",
+                    "p2icon": ["link-white"],
+                    "gameResults": [1],
+                    "video": "",
+                    "children": [
+                        {
+                            "match": "Losers Quarter-Finals",
+                            "p1": "Brylee",
+                            "p1icon": ["sheik"],
+                            "p2": "Jason",
+                            "p2icon": ["marth"],
+                            "gameResults": [0],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Losers Round 2",
+                                    "p1": "Brylee",
+                                    "p1icon": ["sheik"],
+                                    "p2": "Katy",
+                                    "p2icon": ["pikachu-blue"],
+                                    "gameResults": [1],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Losers Round 1",
+                                            "p1": "Ellie",
+                                            "p1icon": ["bowser-blue"],
+                                            "p2": "Brylee",
+                                            "p2icon": ["sheik"],
+                                            "gameResults": [0],
+                                            "video": "",
+                                            "children": []
+                                        },
+                                        {
+                                            "match": "Losers Round 1",
+                                            "p1": "Katy",
+                                            "p1icon": ["pikachu-blue"],
+                                            "p2": "Justus",
+                                            "p2icon": ["link-black"],
+                                            "gameResults": [1],
+                                            "video": "",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "match": "Losers Quarter-Finals",
+                            "p1": "John",
+                            "p1icon": ["link-white"],
+                            "p2": "Haven",
+                            "p2icon": ["young link-blue"],
+                            "gameResults": [1],
+                            "video": "",
+                            "children": [
+                                {
+                                    "match": "Losers Round 2",
+                                    "p1": "Rachel",
+                                    "p1icon": [""],
+                                    "p2": "John",
+                                    "p2icon": [""],
+                                    "gameResults": [0],
+                                    "video": "",
+                                    "children": [
+                                        {
+                                            "match": "Losers Round 1",
+                                            "p1": "John",
+                                            "p1icon": ["link-white"],
+                                            "p2": "Alayna",
+                                            "p2icon": ["kirby-blue"],
+                                            "gameResults": [1],
+                                            "video": "",
+                                            "children": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }
