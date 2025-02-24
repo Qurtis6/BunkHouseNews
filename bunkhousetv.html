@@ -2,8 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=0.6">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="media/bunkhouse-logo.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="media/bunkhouse-logo.png"
+    />
     <title>Bunkhouse TV</title>
+    <nav id="nav"></nav>
+    <script src="nav.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <!-- Moved style to style.css to prevent styling inconsistancies -->
     <!-- <style>
@@ -12,19 +27,10 @@
         .controls { margin-top: 10px; }
         button { margin: 5px; }
     </style> -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/x-icon" href="media/bunkhouse-logo.png" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="media/bunkhouse-logo.png"
-    />
-<nav id="nav"></nav>
-<script src="nav.js"></script>
 </head>
 
 <body>
-    <h2>Bunkhouse TV</h2>
+    <h2 class="page-header">BUNKHOUSE TV</h2>
     <div id="video-container">
         <div id="player"></div>
     </div>

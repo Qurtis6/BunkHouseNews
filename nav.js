@@ -5,6 +5,14 @@ var html =
   <img src="media/bunkhouse-logo.png" class="logo" />\
 </a>\
 <div class="dropdown">\
+  <a class="dropdown-btn">Explore</a>\
+  <div class="dropdown-content">\
+    <a href="games.html">Games</a>\
+    <a href="Melee/index.html">Wehrman Melee</a>\
+    <a href="bunkhousetv.html">Bunkhouse TV</a>\
+  </div>\
+</div>\
+<div class="dropdown">\
   <a class="dropdown-btn">About</a>\
   <div class="dropdown-content">\
     <a href="meet.html">\
@@ -13,18 +21,15 @@ var html =
       Bunk House\
     </a>\
     <a href="history.html">History</a>\
-    <a href="games.html">Games</a>\
-    <a href="Melee/index.html">Wehrman Melee</a>\
-    <a href="bunkhousetv.html">Bunkhouse TV</a>\
+    <a href="master-kirby.html">\
+      Master\
+      <br />\
+      Kirby\
+    </a>\
   </div>\
 </div>\
 <a class="header-btn" href="shop.html">\
   Shop\
-</a>\
-<a class="header-btn" href="master-kirby.html">\
-  Master\
-  <br />\
-  Kirby\
 </a>\
 </div>';
 

@@ -146,7 +146,7 @@ h1 {
 /* MEET THE BUNK HOUSE */
 .meet-container {
   display: grid;
-  grid-template-columns: 2fr 5fr 2fr;
+  grid-template-columns: 1fr 5fr 1fr;
   margin-top: 16px;
   justify-items: center;
   margin-bottom: 24px;
