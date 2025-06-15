@@ -27,32 +27,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     }
 
-    // async function loadAndFilterMatches() {
-    //     playerMatches = [];
-    
-    //     for (const file of jsonFiles) {
-    //         const data = await fetchJSON(file);
-    //         if (data) {
-    //             let winnersMatches = extractPlayerMatches(data.winners, playerName);
-    //             let losersMatches = extractPlayerMatches(data.losers, playerName);
-    
-    //             // Attach the loser's bracket as children of the last winners match
-    //             if (losersMatches.length > 0 && winnersMatches.length > 0) {
-    //                 let lastLosersMatches = findLastMatch(losersMatches);
-    //                 lastLosersMatches.children.push(...winnersMatches);
-    //             }
-    
-    //             let combinedMatches = losersMatches.length > 0 ? losersMatches : winnersMatches;
-    
-    //             if (combinedMatches.length > 0) {
-    //                 playerMatches.push({ year: file.replace(".json", ""), matches: combinedMatches });
-    //             }
-    //         }
-    //     }
-    
-    //     displayBracket();
-    // }
-
     async function loadAndFilterMatches() {
         playerMatches = [];
     
@@ -61,6 +35,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             if (data) {
                 let winnersMatches = extractPlayerMatches(data.winners, playerName);
                 let losersMatches = extractPlayerMatches(data.losers, playerName);
+                //let poolMatches = extractPlayerMatches(data.PoolA, playerName);
     
                 // Extract Grand Finals and Grand Final Reset
                 let grandFinalReset = winnersMatches.find(match => match.match === "Grand Final Reset");
@@ -100,29 +75,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     
         displayBracket();
     }
-    
-    
-    // Recursively search for Grand Finals & Grand Final Reset in the winners bracket
-function extractGrandFinals(matches) {
-    let grandFinals = [];
-    let remainingMatches = [];
-
-    for (const match of matches) {
-        if (match.match === "Grand Finals" || match.match === "Grand Final Reset") {
-            grandFinals.push(match);
-        } else {
-            // Recursively check children
-            match.children = extractGrandFinals(match.children).remainingMatches;
-            remainingMatches.push(match);
-        }
-    }
-
-    return { grandFinals, remainingMatches };
-}
 
 // Usage inside loadAndFilterMatches()
-
-    
     function findLastMatch(matches) {
         if (!matches || matches.length === 0) return null;
     
@@ -134,12 +88,6 @@ function extractGrandFinals(matches) {
     
         return lastMatch;
     }
-    
-    
-    
-    
-    
-    
 
     function extractPlayerMatches(matches, player) {
         if (!matches) return [];
@@ -163,15 +111,6 @@ function extractGrandFinals(matches) {
         return filteredMatches;
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-
     function calculateWins(gameResults, player, p1, p2) {
         return gameResults.filter(result => {
             return (player === p1 && result === 1) || (player === p2 && result === 0);

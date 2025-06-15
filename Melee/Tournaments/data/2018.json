@@ -128,29 +128,29 @@
                     "children": [
                         {
                             "match": "Losers Quarter-Finals",
-                            "p1": "Jacob",
-                            "p1icon": ["puff-green"],
-                            "p2": "Joshua",
-                            "p2icon": ["marth-red"],
-                            "gameResults": [1, 0, 0],
+                            "p1": "Grant",
+                            "p1icon": ["ganon"],
+                            "p2": "Andrew",
+                            "p2icon": ["sheik-green"    ],
+                            "gameResults": [0, 0],
                             "video": "",
                             "children": [
                                 {
                                     "match": "Losers Round 2",
-                                    "p1": "Jacob",
-                                    "p1icon": ["puff-green"],
-                                    "p2": "Johnny",
-                                    "p2icon": ["samus"],
-                                    "gameResults": [1, 0, 1],
+                                    "p1": "Titus",
+                                    "p1icon": [""],
+                                    "p2": "Grant",
+                                    "p2icon": [""],
+                                    "gameResults": [0],
                                     "video": "",
                                     "children": [
                                         {
                                             "match": "Losers Round 1",
-                                            "p1": "Johnny",
-                                            "p1icon": ["samus"],
+                                            "p1": "Onyx",
+                                            "p1icon": [""],
                                             "p2": "Grant",
-                                            "p2icon": ["ganon"],
-                                            "gameResults": [1, 1],
+                                            "p2icon": [""],
+                                            "gameResults": [0],
                                             "video": "",
                                             "children": []
                                         }
