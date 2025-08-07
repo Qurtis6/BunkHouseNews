@@ -11,70 +11,73 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.log(`Player page loaded for: ${playerName}`);
     }
 
-    const dataFolder = "/Melee/Tournaments/data/";
-    const jsonFiles = ["2015.json", "2016.json", "2018.json", "2021.json", "2022.json", "2023.json", "2024.json"]; // Add all your files here
+const dataFolder = "/Melee/Tournaments/data/";
+let playerMatches = [];
 
-    let playerMatches = [];
-
-    async function fetchJSON(file) {
-        try {
-            const response = await fetch(dataFolder + file);
-            if (!response.ok) throw new Error(`Failed to load ${file} - HTTP ${response.status}`);
-            return await response.json();
-        } catch (error) {
-            console.error("Error fetching JSON:", file, error);
-            return null;
-        }
+async function fetchJSON(file) {
+    try {
+        const response = await fetch(dataFolder + file);
+        if (!response.ok) throw new Error(`Failed to load ${file} - HTTP ${response.status}`);
+        return await response.json();
+    } catch (error) {
+        console.error("Error fetching JSON:", file, error);
+        return null;
     }
+}
 
-    async function loadAndFilterMatches() {
-        playerMatches = [];
-    
-        for (const file of jsonFiles) {
-            const data = await fetchJSON(file);
-            if (data) {
-                let winnersMatches = extractPlayerMatches(data.winners, playerName);
-                let losersMatches = extractPlayerMatches(data.losers, playerName);
-                //let poolMatches = extractPlayerMatches(data.PoolA, playerName);
-    
-                // Extract Grand Finals and Grand Final Reset
-                let grandFinalReset = winnersMatches.find(match => match.match === "Grand Final Reset");
-                let grandFinal = winnersMatches.find(match => match.match === "Grand Finals");
-    
-                // Remove them from the winners list
-                winnersMatches = winnersMatches.filter(match => 
-                    match.match !== "Grand Finals" && match.match !== "Grand Final Reset"
-                );
-    
-                if (losersMatches.length > 0) {
-                    let lastLosersMatch = findLastMatch(losersMatches);
-    
-                    // Attach winners bracket to the last match of the losers bracket
-                    lastLosersMatch.children.push(...winnersMatches);
-                    
-                    // Attach the full losers bracket to Grand Finals
-                    if (grandFinal) {
-                        grandFinal.children.push(...losersMatches);
-                    }
-                } else if (grandFinal) {
-                    // If no losers bracket, just add winners to Grand Finals
-                    grandFinal.children.push(...winnersMatches);
+async function loadJsonIndex() {
+    try {
+        const index = await fetchJSON("index.json");
+        if (!index || !Array.isArray(index)) throw new Error("Invalid index.json format");
+        return index;
+    } catch (error) {
+        console.error("Error loading index.json:", error);
+        return [];
+    }
+}
+
+async function loadAndFilterMatches() {
+    playerMatches = [];
+    const jsonFiles = await loadJsonIndex();
+
+    for (const file of jsonFiles) {
+        const data = await fetchJSON(file);
+        if (data) {
+            let winnersMatches = extractPlayerMatches(data.winners, playerName);
+            let losersMatches = extractPlayerMatches(data.losers, playerName);
+
+            let grandFinalReset = winnersMatches.find(match => match.match === "Grand Final Reset");
+            let grandFinal = winnersMatches.find(match => match.match === "Grand Finals");
+
+            winnersMatches = winnersMatches.filter(match => 
+                match.match !== "Grand Finals" && match.match !== "Grand Final Reset"
+            );
+
+            if (losersMatches.length > 0) {
+                let lastLosersMatch = findLastMatch(losersMatches);
+                lastLosersMatch.children.push(...winnersMatches);
+
+                if (grandFinal) {
+                    grandFinal.children.push(...losersMatches);
                 }
-    
-                // Ensure Grand Final Reset (if exists) is the root node
-                let finalBracket = grandFinalReset ? [grandFinalReset] : [];
-                if (grandFinal) finalBracket.push(grandFinal);
-    
-                if (finalBracket.length > 0) {
-                    playerMatches.push({ year: file.replace(".json", ""), matches: finalBracket });
-                } else if ((winnersMatches.length > 0)){
-                    playerMatches.push({ year: file.replace(".json", ""), matches: losersMatches.length > 0 ? losersMatches : winnersMatches });
-                }
+            } else if (grandFinal) {
+                grandFinal.children.push(...winnersMatches);
+            }
+
+            let finalBracket = grandFinalReset ? [grandFinalReset] : [];
+            if (grandFinal) finalBracket.push(grandFinal);
+
+            if (finalBracket.length > 0) {
+                playerMatches.push({ year: file.replace(".json", ""), matches: finalBracket });
+            } else if ((winnersMatches.length > 0)){
+                playerMatches.push({ year: file.replace(".json", ""), matches: losersMatches.length > 0 ? losersMatches : winnersMatches });
             }
         }
-    
-        displayBracket();
     }
+
+    displayBracket();
+}
+
 
 // Usage inside loadAndFilterMatches()
     function findLastMatch(matches) {
