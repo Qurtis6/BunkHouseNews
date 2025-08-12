@@ -48,8 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         matchDiv.dataset.match = matchData.match;
         matchDiv.dataset.p1 = matchData.p1;
+        matchDiv.dataset.p1char = matchData.p1icon[0];
         matchDiv.dataset.p1wins = p1wins;  // Set dynamically calculated wins
         matchDiv.dataset.p2 = matchData.p2;
+        matchDiv.dataset.p2char = matchData.p2icon[0];
         matchDiv.dataset.p2wins = p2wins;  // Set dynamically calculated wins
         matchDiv.dataset.video = matchData.video;
 

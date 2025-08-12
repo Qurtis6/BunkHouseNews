@@ -294,13 +294,13 @@ p.link:hover{
   overflow: hidden;
   position: relative; /* Parent positioning context */
 }
-img.char-left {
+img#char-left {
   position: absolute;
-  top: -40%;
-  left: -35%;
+  top: -35%;
+  left: -32%;
   height: 400px;
 }
-img.char-right {
+img#char-right {
   position: absolute;
   top: -40%;
   right: -75%;

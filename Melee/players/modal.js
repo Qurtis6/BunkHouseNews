@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var modal_p_title = document.getElementById("modal-p-title");
     var modal_table = document.getElementById("modal-table");
     var modal_video = document.getElementById("modal-video");
+    var modal_p1char = document.getElementById("char-left");
+    var modal_p2char = document.getElementById("char-right");
 
     // Select all match containers including the winners, losers, and pools
     var allMatchContainers = document.querySelectorAll("#winners, #losers, #poolA, #poolB, #poolC, #poolD, #poolE, #poolF, #poolG, #poolH, #player-bracket");
@@ -45,28 +47,41 @@ document.addEventListener("DOMContentLoaded", function () {
             if (event.target.closest(".item-match")) {
                 var btn = event.target.closest(".item-match");
 
+                var videoSrc = btn.getAttribute('data-video');
+
                 modal.style.display = "block";
                 modal_p_title.textContent = btn.getAttribute('data-match');
                 modal_table.rows[0].cells[0].innerHTML = btn.getAttribute('data-p1');
                 modal_table.rows[0].cells[1].innerHTML = btn.getAttribute('data-p1wins');
                 modal_table.rows[0].cells[4].innerHTML = btn.getAttribute('data-p2');
                 modal_table.rows[0].cells[3].innerHTML = btn.getAttribute('data-p2wins');
-                modal_video.src = btn.getAttribute('data-video');
+                if (!videoSrc || videoSrc.trim() === "") {
+                    // No video, so set images
+                    modal_p1char.src = `../Images/Classic Poses/Left/${btn.getAttribute('data-p1char')}.png`;
+                    modal_p2char.src = `../Images/Classic Poses/Right/${btn.getAttribute('data-p2char')}.png`;
+                } else {
+                    // We have a video, so set the video element's src instead
+                    modal_video.src = videoSrc;
+                }            
             }
         });
     });
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
+    function closeModal() {
         modal.style.display = "none";
         modal_video.src = "";
-    };
+        modal_p1char.src = "";
+        modal_p2char.src = "";
+    }
 
-    // When the user clicks anywhere outside of the modal, close it
+    // When the user clicks on <span> (x)
+    span.onclick = closeModal;
+
+    // When the user clicks anywhere outside the modal
     window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-            modal_video.src = "";
+        if (event.target === modal) {
+            closeModal();
         }
     };
+
 });
