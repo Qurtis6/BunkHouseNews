@@ -1,4 +1,27 @@
 {
+    "results":[
+        { "place": 1, "name": "Curtis", "tag": "", "icon": ["marth"] },
+        { "place": 2, "name": "Preston", "tag": "", "icon": "fox" },
+        { "place": 3, "name": "Andrew", "tag": "", "icon": "sheik-green" },
+        { "place": 4, "name": "Joshua", "tag": "", "icon": "marth-red" },
+        { "place": 4, "name": "Jacob", "tag": "", "icon": "puff-green" },
+        { "place": 6, "name": "Grant", "tag": "", "icon": "ganon" },
+        { "place": 6, "name": "Caleb", "tag": "", "icon": "marth-white" },
+        { "place": 8, "name": "Titus", "tag": "", "icon": "doc-blue" },
+        { "place": 8, "name": "Johnny", "tag": "", "icon": "link-black" },
+        { "place": 10, "name": "Onyx", "tag": "", "icon": "falcon" },
+        { "place": 11, "name": "Piper", "tag": "", "icon": "kirby-yellow" },
+        { "place": 12, "name": "Jason", "tag": "", "icon": "marth" },
+        { "place": 13, "name": "Carrie", "tag": "", "icon": "kirby" },
+        { "place": 14, "name": "John", "tag": "", "icon": "link-white" },
+        { "place": 15, "name": "Haven", "tag": "", "icon": "young link" },
+        { "place": 15, "name": "Brylee", "tag": "", "icon": "sheik" },
+        { "place": 17, "name": "Katy", "tag": "", "icon": "pika-blue" },
+        { "place": 17, "name": "Rachel", "tag": "", "icon": "kirby" },
+        { "place": 19, "name": "Ellie", "tag": "", "icon": "bowser-blue" },
+        { "place": 19, "name": "Justus", "tag": "", "icon": "link-black" },
+        { "place": 19, "name": "Alayna", "tag": "", "icon": "kirby-blue" }
+    ],
     "winners": [
         {
             "match": "Grand Finals",

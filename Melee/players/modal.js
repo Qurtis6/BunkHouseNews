@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function closeModal() {
         modal.style.display = "none";
-        modal_video.src = "";
+        if (modal_video) modal_video.src = "";
         modal_p1char.src = "";
         modal_p2char.src = "";
     }

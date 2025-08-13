@@ -134,6 +134,23 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             // Now, we can access the `data` which is the parsed JSON file.
+            // Create a lookup from results: name -> display name
+            const nameMap = {};
+            if (data.results && Array.isArray(data.results)) {
+                data.results.forEach(player => {
+                    // Use tag if provided, otherwise stick with name
+                    nameMap[player.name] = player.tag && player.tag.trim() !== "" ? player.tag : player.name;
+                });
+            }
+
+            // Wrap original createMatchElement so it replaces names
+            const originalCreateMatchElement = createMatchElement;
+            createMatchElement = function (matchData) {
+                // Replace p1 and p2 names from results mapping
+                if (nameMap[matchData.p1]) matchData.p1 = nameMap[matchData.p1];
+                if (nameMap[matchData.p2]) matchData.p2 = nameMap[matchData.p2];
+                return originalCreateMatchElement(matchData);
+            };
 
             // Start building the winners bracket
             const winnersBracketElement = buildBracket(data.winners[0]);
