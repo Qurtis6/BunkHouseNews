@@ -29,7 +29,7 @@ async function loadJsonIndex() {
     try {
         const index = await fetchJSON("index.json");
         if (!index || !Array.isArray(index)) throw new Error("Invalid index.json format");
-        return index;
+        return index.slice().reverse();
     } catch (error) {
         console.error("Error loading index.json:", error);
         return [];

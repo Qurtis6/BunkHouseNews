@@ -9,8 +9,7 @@ div.background {
     background-position: 40% 45%;
     background-size: 200px 200px;
     transform: rotate(-10deg) scale(1.5);
-    background-color: rgb(14, 31, 12);
-    filter: hue-rotate(90deg);
+    background-color: #ffcc00;
 }
 img.playerChar {
     -webkit-filter: drop-shadow(15px 15px 0px #000000);

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const { players, unrankedPlayers } = data;
             const allPlayers = [...players, ...unrankedPlayers];
 
-            // Find the player by name and determine their rank
+            // Find the player
             const playerIndex = players.findIndex(p => p.name === playerName);
             const player = allPlayers.find(p => p.name === playerName);
 
@@ -63,10 +63,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 baseIcon = iconSeriesMapping[baseIcon];
             }
 
-            // Update background image
+            // Update background image & color
             const backgroundElement = document.getElementById("background");
-            if (backgroundElement && baseIcon) {
-                backgroundElement.style.backgroundImage = `url('/Melee/Images/Symbols/${baseIcon}.svg')`;
+            if (backgroundElement) {
+                if (baseIcon) {
+                    backgroundElement.style.backgroundImage = `url('/Melee/Images/Symbols/${baseIcon}.svg')`;
+                }
+                if (player.color) {
+                    backgroundElement.style.backgroundColor = player.color;
+                }
             }
 
             // Update rank display
