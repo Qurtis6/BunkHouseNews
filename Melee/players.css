@@ -12,6 +12,13 @@ div.background {
     background-color: #ffcc00;
 }
 img.playerChar {
+    position: absolute;
+    top: -1%;
+    left: -3%;
+    width: 75%;
     -webkit-filter: drop-shadow(15px 15px 0px #000000);
     filter: drop-shadow(15px 15px 0px #000000);
+}
+p#rank {
+    padding-left: 20px;
 }
