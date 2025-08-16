@@ -44,42 +44,38 @@ document.addEventListener("DOMContentLoaded", async function () {
             const data = await fetchJSON(file);
             if (!data) continue;
 
-            // Build alias set so the URL can be either the real name or the tag
+            // Build alias set so URL can be either the real name or the tag
             const aliases = buildAliases(data, playerName);
 
-            // Winners without Grand Final nodes (we add GFs as a separate stage)
-            const winnersNoGF = (data.winners || []).filter(m => !/grand final/i.test(m.match || ""));
+            // ----- Extract raw player-specific matches for winners (keeps nested structure) -----
+            const winnersAll = extractPlayerMatches(data.winners || [], aliases);
 
-            // Extract per stage
-            const poolWinners = extractPlayerMatches(
-                [].concat(data.poolA || [], data.poolB || [], data.poolC || [], data.poolD || []),
-                aliases
-            );
-            const winners = extractPlayerMatches(winnersNoGF, aliases);
-            const poolLosers = extractPlayerMatches(
-                [].concat(data.poolE || [], data.poolF || [], data.poolG || [], data.poolH || []),
-                aliases
-            );
-            const losers = extractPlayerMatches(data.losers || [], aliases);
+            // flatten winners tree into chronological list (earliest -> latest)
+            const winnersFlat = flattenMatches(winnersAll);
 
-            // Grand Finals (supports "Grand Final", "Grand Finals", "Grand Final Reset")
-            const grandFinalsRaw = (data.winners || []).filter(m => /grand final/i.test(m.match || ""));
-            // Prefer Reset as latest if both exist
-            grandFinalsRaw.sort((a, b) => {
-                const rank = (x) => /reset/i.test(x.match || "") ? 2 : 1;
-                return rank(a) - rank(b); // GF first, Reset last (we'll chain latest-first below)
-            });
-            const grandFinals = extractPlayerMatches(grandFinalsRaw, aliases);
+            // GF detection helper
+            const isGF = (m) => {
+                const s = (m?.match || "").trim().toLowerCase();
+                return s === "grand final" || s === "grand finals" || s === "grand final reset" || s === "grand finals reset";
+            };
 
-            // Build each stage as a linear chain, latest → earliest
-            const chainPoolWinners = chainMatches(poolWinners);
-            const chainWinners     = chainMatches(winners);
-            const chainPoolLosers  = chainMatches(poolLosers);
-            const chainLosers      = chainMatches(losers);
-            const chainGF          = chainMatches(grandFinals);
+            // split flattened winners into gfMatches and winnersSansGF
+            const gfMatches = winnersFlat.filter(isGF);
+            const winnersSansGF = winnersFlat.filter(m => !isGF(m));
 
-            // Stitch stages latest → earliest:
-            // GF → Losers → Pool E–H → Winners → Pool A–D
+            // also extract and flatten other stages
+            const poolWinners = flattenMatches(extractPlayerMatches([].concat(data.poolA || [], data.poolB || [], data.poolC || [], data.poolD || []), aliases));
+            const poolLosers  = flattenMatches(extractPlayerMatches([].concat(data.poolE || [], data.poolF || [], data.poolG || [], data.poolH || []), aliases));
+            const losersFlat  = flattenMatches(extractPlayerMatches(data.losers || [], aliases));
+
+            // ----- Build each stage as a linear chain (we expect arrays to be earliest->latest) -----
+            const chainGF          = chainMatches(gfMatches,     /*latestFirst=*/true);
+            const chainLosers      = chainMatches(losersFlat,    /*latestFirst=*/true);
+            const chainPoolLosers  = chainMatches(poolLosers,    /*latestFirst=*/true);
+            const chainWinners     = chainMatches(winnersSansGF, /*latestFirst=*/true);
+            const chainPoolWinners = chainMatches(poolWinners,   /*latestFirst=*/true);
+
+            // ----- Stitch stages latest → earliest: GF → Losers → Pool E–H → Winners → Pool A–D -----
             const root = stitchStages([
                 chainGF,
                 chainLosers,
@@ -115,6 +111,22 @@ document.addEventListener("DOMContentLoaded", async function () {
         return set;
     }
 
+    // Flatten a nested match list into an array ordered earliest -> latest (post-order).
+    // Each returned node is a shallow copy with children cleared so we can chain them later.
+    function flattenMatches(matches) {
+        if (!matches || matches.length === 0) return [];
+        const out = [];
+        matches.forEach(m => {
+            if (m.children && m.children.length > 0) {
+                out.push(...flattenMatches(m.children));
+            }
+            // shallow copy, remove children to avoid keeping nested structure
+            const copy = { ...m, children: [] };
+            out.push(copy);
+        });
+        return out;
+    }
+
     function findLastMatch(matches) {
         if (!matches || matches.length === 0) return null;
 
@@ -130,17 +142,30 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Link multiple matches in a stage into a single linear chain.
     // If latestFirst=true, the FIRST node returned is the latest match,
     // and each child is the prior (earlier) match.
-    function chainMatches(matches) {
+    function chainMatches(matches, latestFirst = true) {
         if (!matches || matches.length === 0) return null;
         if (matches.length === 1) return matches[0];
-        // later → earlier: tail(later) -> earlier
-        for (let i = matches.length - 2; i >= 0; i--) {
-            const later = matches[i + 1];
-            const earlier = matches[i];
-            const tail = findLastMatch([later]);
-            if (tail) tail.children = [earlier];
+
+        // matches expected earliest -> latest
+        if (latestFirst) {
+            // For i from second-last down to 0: attach earlier as child of later
+            for (let i = matches.length - 2; i >= 0; i--) {
+                const later = matches[i + 1];
+                const earlier = matches[i];
+                const tail = findLastMatch([later]);
+                if (tail) tail.children = [earlier];
+            }
+            return matches[matches.length - 1]; // latest as root
+        } else {
+            // earlier -> later
+            for (let i = 0; i < matches.length - 1; i++) {
+                const earlier = matches[i];
+                const later = matches[i + 1];
+                const tail = findLastMatch([earlier]);
+                if (tail) tail.children = [later];
+            }
+            return matches[0]; // earliest as root
         }
-        return matches[matches.length - 1]; // latest as root
     }
 
     // Stitch an ordered list of stage roots, skipping nulls.
