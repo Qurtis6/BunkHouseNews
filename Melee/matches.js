@@ -68,14 +68,14 @@ document.addEventListener("DOMContentLoaded", async function () {
             const poolLosers  = flattenMatches(extractPlayerMatches([].concat(data.poolE || [], data.poolF || [], data.poolG || [], data.poolH || []), aliases));
             const losersFlat  = flattenMatches(extractPlayerMatches(data.losers || [], aliases));
 
-            // ----- Build each stage as a linear chain (we expect arrays to be earliest->latest) -----
+            // ----- Build each stage as a linear chain -----
             const chainGF          = chainMatches(gfMatches,     /*latestFirst=*/true);
             const chainLosers      = chainMatches(losersFlat,    /*latestFirst=*/true);
             const chainPoolLosers  = chainMatches(poolLosers,    /*latestFirst=*/true);
             const chainWinners     = chainMatches(winnersSansGF, /*latestFirst=*/true);
             const chainPoolWinners = chainMatches(poolWinners,   /*latestFirst=*/true);
 
-            // ----- Stitch stages latest → earliest: GF → Losers → Pool E–H → Winners → Pool A–D -----
+            // ----- Stitch stages latest → earliest -----
             const root = stitchStages([
                 chainGF,
                 chainLosers,
@@ -84,9 +84,21 @@ document.addEventListener("DOMContentLoaded", async function () {
                 chainPoolWinners
             ]);
 
+            // ===== Find placement for this tournament (robust lookup) =====
+            let placement = null;
+            const foundResult = (data.results || []).find(r => {
+                const rn = (r.name || "").trim();
+                const rt = (r.tag  || "").trim();
+                return aliases.has(rn) || aliases.has(rt);
+            });
+            if (foundResult && typeof foundResult.place === "number") {
+                placement = foundResult.place;
+            }
+
             if (root) {
                 playerMatches.push({
                     year: file.replace(".json", ""),
+                    placement: placement,
                     matches: [root]
                 });
             }
@@ -97,17 +109,21 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // ========== UTILITIES ==========
 
-    // Build a set of acceptable names for matching (handles "name" vs "tag")
     function buildAliases(data, player) {
-        const set = new Set([player]);
+        const set = new Set();
+        const p = (player || "").trim();
+        if (p) set.add(p);
+
         (data.results || []).forEach(r => {
             const n = (r.name || "").trim();
-            const t = (r.tag || "").trim();
-            if (n && (n === player || t === player)) {
-                if (n) set.add(n);
+            const t = (r.tag  || "").trim();
+            // If the URL name matches either the name or tag, add both to aliases
+            if (n && (n === p || t === p)) {
+                set.add(n);
                 if (t) set.add(t);
             }
         });
+
         return set;
     }
 
@@ -187,8 +203,9 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         const isHit = (p) => {
             if (!p) return false;
-            if (playerOrAliases instanceof Set) return playerOrAliases.has(p);
-            return p === playerOrAliases;
+            const trimmed = (p || "").trim();
+            if (playerOrAliases instanceof Set) return playerOrAliases.has(trimmed);
+            return trimmed === playerOrAliases;
         };
 
         let filtered = [];
@@ -198,11 +215,9 @@ document.addEventListener("DOMContentLoaded", async function () {
             const playerInMatch = isHit(match.p1) || isHit(match.p2);
 
             if (playerInMatch) {
-                // Keep this match and keep only relevant child path(s)
                 const matchCopy = { ...match, children: childMatches };
                 filtered.push(matchCopy);
             } else if (childMatches.length > 0) {
-                // Bubble up relevant child path(s)
                 filtered.push(...childMatches);
             }
         });
@@ -337,6 +352,17 @@ document.addEventListener("DOMContentLoaded", async function () {
         return wrapper;
     }
 
+    // ----- Placement suffix helper -----
+    function ordinalSuffix(n) {
+        if (typeof n !== "number") return "";
+        const j = n % 10,
+              k = n % 100;
+        if (j === 1 && k !== 11) return n + "st";
+        if (j === 2 && k !== 12) return n + "nd";
+        if (j === 3 && k !== 13) return n + "rd";
+        return n + "th";
+    }
+
     function displayBracket() {
         const bracketContainer = document.getElementById("player-bracket");
         bracketContainer.innerHTML = "";
@@ -347,14 +373,26 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
 
         playerMatches.forEach(yearData => {
+            const yearWrapper = document.createElement("div");
+            yearWrapper.classList.add("year-block");
+
             const yearElement = document.createElement("p");
             yearElement.classList.add("year");
             yearElement.textContent = yearData.year;
-            bracketContainer.appendChild(yearElement);
+            yearWrapper.appendChild(yearElement);
+
+            if (typeof yearData.placement === "number") {
+                const placementElement = document.createElement("p");
+                placementElement.classList.add("placement");
+                placementElement.textContent = `${ordinalSuffix(yearData.placement)}`;
+                yearWrapper.appendChild(placementElement);
+            }
 
             yearData.matches.forEach(match => {
-                bracketContainer.appendChild(buildBracket(match));
+                yearWrapper.appendChild(buildBracket(match));
             });
+
+            bracketContainer.appendChild(yearWrapper);
         });
     }
 
