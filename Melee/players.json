@@ -1,6 +1,6 @@
 {
     "players": [
-      { "name": "Preston", "color": "#ffcc00", "tag": "Gouda", "icon": "fox" },
+      { "name": "Preston", "color": "#ffcc00", "tag": "Gouda", "icon": "yoshi-cyan" },
       { "name": "Caleb", "color": "#112e69", "tag": "Mozy", "icon": "falco-red" },
       { "name": "Johnny", "color": "#4a5d23", "tag": "BoB%", "icon": "marth" },
       { "name": "Onyx", "color": "#4f2683", "tag": "OP", "icon": "doc-red" },
