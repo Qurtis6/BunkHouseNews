@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "bowser": "mario",
                 "peach": "mario",
                 "ganon": "zelda",
+                "sheik": "zelda",
                 "falco": "fox",
                 "link": "zelda",
                 "young link": "zelda",
