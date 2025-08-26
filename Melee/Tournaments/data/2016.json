@@ -10,7 +10,7 @@
         { "place": 7, "name": "Grant", "tag": "", "icon": "ganon" },
         { "place": 9, "name": "Adam", "tag": "", "icon": "marth" },
         { "place": 9, "name": "Titus", "tag": "", "icon": "kirby-blue" },
-        { "place": 9, "name": "Preston", "tag": "", "icon": "link" },
+        { "place": 9, "name": "Preston", "tag": "", "icon": "doc-black" },
         { "place": 9, "name": "Addi", "tag": "", "icon": "kirby-red" },
         { "place": 13, "name": "Geoffrey", "tag": "", "icon": "mario" },
         { "place": 13, "name": "Carrie", "tag": "", "icon": "kirby" },
@@ -161,7 +161,7 @@
                                     "p1": "Andrew",
                                     "p1icon": ["sheik-green"],
                                     "p2": "Preston",
-                                    "p2icon": ["link"],
+                                    "p2icon": ["doc-black"],
                                     "gameResults": [1],
                                     "video": "",
                                     "children": [
@@ -189,7 +189,7 @@
                                         {
                                             "match": "Round 2",
                                             "p1": "Preston",
-                                            "p1icon": ["link"],
+                                            "p1icon": ["doc-black"],
                                             "p2": "Grant",
                                             "p2icon": ["ganon"],
                                             "gameResults": [1],
@@ -283,7 +283,7 @@
                             "p1icon": ["marth-red"],
                             "p2": "Caleb",
                             "p2icon": ["marth-white"],
-                            "gameResults": [1],
+                            "gameResults": [0],
                             "video": "",
                             "children": [
                                 {
@@ -394,7 +394,7 @@
                                         {
                                             "match": "Losers Round 3",
                                             "p1": "Preston",
-                                            "p1icon": ["link"],
+                                            "p1icon": ["doc-black"],
                                             "p2": "Onyx",
                                             "p2icon": ["link-black"],
                                             "gameResults": [0],
