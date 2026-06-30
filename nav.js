@@ -7,9 +7,11 @@ var html =
 <div class="dropdown">\
   <a class="dropdown-btn">Explore</a>\
   <div class="dropdown-content">\
-    <a href="games.html">Games</a>\
     <a href="Melee/index.html">Wehrman Melee</a>\
+    <a href="fantasy-football.html">Fantasy Football</a>\
+    <a href="games.html">Games</a>\
     <a href="bunkhousetv.html">Bunkhouse TV</a>\
+    <a href="pokemon.html">Pokemon League</a>\
   </div>\
 </div>\
 <div class="dropdown">\
@@ -44,7 +46,9 @@ var hamburger =
         <ul><a href="history.html">History</a></li>\
         <ul><a href="shop.html">Shop</a></li>\
         <ul><a href="games.html">Games</a></li>\
-        <a href="Melee/index.html">Wehrman Melee</a>\
+        <ul><a href="Melee/index.html">Wehrman Melee</a><li>\
+        <ul><a href="fantasy-football.html">Fantasy Football</a><li>\
+        <ul><a href="pokemon.html">Pokemon League</a><li>\
         <ul><a href="bunkhousetv.html">Bunkhouse TV</a></li>\
         <ul><a href="master-kirby.html">Master<br >Kirby</a></li>\
       </ul>\
